@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcserv kodumasinad</title>
   </head>
+  <script src="javaScript/language.js"></script>
+
   <body>
     <div id="header">
       <nav class="header-content">
         <span id="logo">LOGO</span>
         <img src="assets\img/marcserv_logo.png" alt="MarcservLogo" width="240">
         <div id="nav-menu" class="nav-menu">
-          <a id="button" href="/index.html">Avaleht</a>
-          <a id="button" href="/contact.html">Võta ühendust</a>
+          <a id="homeBtn" href="/index.html" data-et="Avaleht" data-en="Home Page">Avaleht</a>
+          <a id="contactBtn" href="/contact.html" data-et="Võta ühendust" data-en="Contact">Võta ühendust</a>
         </div>
+        <button onclick="toggleLanguage()">Vaheta keel / Switch Language</button>
       </nav>
     </div>
 
     <header>
-      <h1>Avaleht</h1>
+      <h1 data-et="Avaleht" data-en="Home Page">Avaleht</h1>
   </header>
 
   <main>
       <section>
-          <h2>Kodumasinate remont ja hooldus</h2>
+        <h2 data-et="Kodumasinate remont ja hooldus" data-en="Repair and Maintenance of Household Appliances">Kodumasinate remont ja hooldus</h2>
           <p>Meie peamiseks tegevusalaks on väikeste kodumasinate remont ja hooldus. Pakume ka abiks teistele masinatele spetsialiseerunud remondi- ja hooldusspetsialiste.</p>
           <p>Tänu pikaajalisele kogemusele kodumasinate remondi alal oleme kursis kõikvõimalike probleemidega ning teame kuidas leida lahendus, et sina ei peaks pead murdma ja lahendust omal käel otsima.</p>
           <p>Teostame tööd Tallinnas ja Harjumaal, kaugemad piirkonnad kokkuleppel.</p>
@@ -32,7 +35,7 @@
       </section>
 
       <section>
-          <h3>Teenindame järgmisi seadmeid:</h3>
+        <h3 data-et="Teenindame järgmisi seadmeid:" data-en="We Service the Following Appliances:">Teenindame järgmisi seadmeid:</h3>
           <ul>
               <li>Õhupuhastid</li>
               <li>Pliidid</li>
@@ -45,7 +48,7 @@
       </section>
 
       <section>
-        <h3>Spetsialistid aamen ja klots</h3>
+        <h3 data-et="Spetsialistid aamen ja klots" data-en="Our Specialists">Spetsialistid aamen ja klots</h3>
         <div>
           <img src="assets\img//ken.JPG" alt="Ken" width="120">
             <h4>Ken Rasmus Kuning</h4>

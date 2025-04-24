@@ -9,21 +9,31 @@
   <script src="javaScript/language.js"></script>
 
   <body>
-    <div id="header">
-      <nav class="header-content">
-        <span id="logo">LOGO</span>
-        <img src="assets\img/marcserv_logo.png" alt="MarcservLogo" width="240">
-        <div id="nav-menu" class="nav-menu">
-          <a id="homeBtn" href="/index.html" data-et="Avaleht" data-en="Home Page">Avaleht</a>
-          <a id="contactBtn" href="/contact.html" data-et="Võta ühendust" data-en="Contact">Võta ühendust</a>
+    <header id="site-header">
+      <nav class="header-nav">
+        <div class="logo-container">
+          <img
+            src="assets/img/marcserv_logo.png"
+            alt="Marcserv logo"
+            class="logo"
+          />
         </div>
-        <button onclick="toggleLanguage()">Vaheta keel / Switch Language</button>
+        <div class="nav-links">
+          <a href="index.html" class="nav-item">Avaleht</a>
+          <a href="contact.html" class="nav-item active">Kontakt</a>
+        </div>
+        <div class="lang-switch">
+          <a href="#" class="lang">
+            <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
+            Eesti
+          </a>
+          <a href="#" class="lang">
+            <img src="assets/img/english.png" alt="English" class="lang-flag" />
+            English
+          </a>
+        </div>
       </nav>
-    </div>
-
-    <header>
-      <h1 data-et="Avaleht" data-en="Home Page">Avaleht</h1>
-  </header>
+    </header>
 
   <main>
       <section>
@@ -78,27 +88,26 @@
   </section>
     </main>
   </body>
-  <footer>
-    <section>
-        <h3>Ettevõtte info</h3>
-        <p><strong>Marcserv kodumasin OÜ</strong></p>
-        <p>TÖID TEOSTAME</p>
-        <p><strong>Registrikood:</strong> 16356420</p>
-        <p><strong>KMKR nr:</strong> EE100983276</p>
-        <p><strong>Aadress:</strong> Mustamäe tee 24 (eelneval kokkuleppel)</p>
-        <p><strong>E-post:</strong> marcserv.hooldus@gmail.com</p>
-        <p><strong>Telefon:</strong> +372 502 3767</p>
-        <p><strong>Lahtiolekuajad:</strong> E–R 9.00–17.00, kokkuleppel ka muudel aegadel</p>
-        <p>Copyright © 2025 - Marcserv kodumasin OÜ</p>
-    </section>
-
-    <section>
-        <h3>Kontakt</h3>
-        <p>Helistades kirjelda probleemi võimalikult täpselt. Võibolla leiame lahenduse kohe.</p>
-        <p><strong>Teeninduspiirkond:</strong> Tallinn ja Harjumaa</p>
-        <p><strong>E-post:</strong> marcserv.hooldus@gmail.com</p>
-        <p><strong>Margus Palm – Hooldustehnik:</strong> +372 5023 767</p>
-        <p><strong>Ken Rasmus Kuning – Varuosade spetsialist:</strong> +372 5193 4129</p>
-    </section>
-</footer>
+  <footer id="site-footer">
+    <div class="footer-container">
+      <div class="footer-column1">
+        <p><strong>Kodumasin OÜ</strong></p>
+        <p>Registrikood: 16356420</p>
+        <p>KMKR nr: EE100983276</p>
+      </div>
+      <div class="footer-column2">
+        <p><strong>Kus ja millal</strong></p>
+        <p>E-R 9:00-17:00</p>
+        <p>Mustamäe tee 24</p>
+      </div>
+      <div class="footer-column3">
+        <p><strong>Kontakt</strong></p>
+        <p>marcserv.hooldus@gmail.com</p>
+        <p>+372 5023767</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Marcserv kodumasin OÜ</p>
+    </div>
+  </footer>
 </html>

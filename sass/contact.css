@@ -63,4 +63,8 @@
   height: 14px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+body {
+  font-family: "Arial", sans-serif;
 }/*# sourceMappingURL=contact.css.map */

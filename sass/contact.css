@@ -1,1 +1,118 @@
-/*# sourceMappingURL=contact.css.map */
+#site-header {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 20px;
+}
+#site-header .header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#site-header .logo-container {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+#site-header .logo-container .logo {
+  height: 40px;
+  width: auto;
+}
+#site-header .nav-links {
+  display: flex;
+  gap: 20px;
+}
+#site-header .nav-links .nav-item {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+  position: relative;
+}
+#site-header .nav-links .nav-item:hover {
+  color: #4b5f61;
+}
+#site-header .nav-links .nav-item::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0;
+  background: #0066cc;
+  transition: width 0.3s;
+}
+#site-header .nav-links .nav-item:hover::after {
+  width: 100%;
+}
+#site-header .nav-links .nav-item.active {
+  font-weight: normal;
+  text-decoration: underline;
+}
+#site-header .lang-switch {
+  display: flex;
+  gap: 10px;
+}
+#site-header .lang-switch .lang {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+#site-header .lang-switch .lang:hover {
+  text-decoration: underline;
+}
+#site-header .lang-switch .lang-flag {
+  width: 20px;
+  height: 14px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#site-footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  color: #333;
+}
+#site-footer .footer-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-areas: "footer-column1 footer-column2 footer-column3";
+}
+#site-footer .footer-column1 {
+  grid-area: footer-column1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#site-footer .footer-column1 p {
+  margin: 0;
+}
+#site-footer .footer-column2 {
+  grid-area: footer-column2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#site-footer .footer-column2 p {
+  margin: 0;
+}
+#site-footer .footer-column3 {
+  grid-area: footer-column3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#site-footer .footer-column3 p {
+  margin: 0;
+}
+#site-footer .copyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,64 @@
+#site-header
+  background-color: $header
+  border-bottom: 1px solid lightgray
+  padding: 10px 20px
+
+  .header-nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .logo-container
+    display: flex
+    align-items: baseline
+    gap: 10px
+
+    .logo
+      height: 40px
+      width: auto
+
+  .nav-links
+    display: flex
+    gap: 20px
+
+    .nav-item
+      text-decoration: none
+      color: $button
+      font-weight: bold
+      position: relative
+
+      &:hover
+        color: $button-hover
+
+      &::after
+        content: ''
+        display: block
+        margin: auto
+        height: 2px
+        width: 0
+        background: $button
+        transition: width 0.3s
+
+      &:hover::after
+        width: 100%
+
+      &.active
+        font-weight: normal
+        text-decoration: underline
+
+  .lang-switch
+    display: flex
+    gap: 10px
+
+    .lang
+      font-size: 14px
+      text-decoration: none
+      color: black
+
+      &:hover
+        text-decoration: underline
+
+    .lang-flag
+      width: 20px
+      height: 14px
+      object-fit: contain

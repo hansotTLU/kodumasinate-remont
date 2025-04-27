@@ -18,18 +18,23 @@
             class="logo"
           />
         </div>
+
+        <button class="hamburger" id="hamburger">☰</button>
+
         <div class="nav-links">
-          <a href="index.html" class="nav-item">Avaleht</a>
-          <a href="contact.html" class="nav-item active">Kontakt</a>
+          <a href="index.html" class="nav-item" data-lang="home">Avaleht</a>
+          <a href="contact.html" class="nav-item active" data-lang="contact"
+            >Kontakt</a
+          >
         </div>
         <div class="lang-switch">
-          <a href="#" class="lang">
-            <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
-            Eesti
-          </a>
-          <a href="#" class="lang">
+          <a href="#" class="lang" id="english-lang">
             <img src="assets/img/english.png" alt="English" class="lang-flag" />
             English
+          </a>
+          <a href="#" class="lang" id="estonian-lang">
+            <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
+            Eesti
           </a>
         </div>
       </nav>
@@ -46,7 +51,7 @@
       </section>
 
       <section class="services-and-brands">
-        <h2>Teenindame järgmisi seadmeid:</h2>
+        <h2>Teenindame järgmisi seadmeid ja brände:</h2>
       
         <div class="services-content-wrapper">
           <div class="services-listing">
@@ -78,19 +83,19 @@
       
 
       <section>
-  <h2 data-et="Spetsialistid aamen ja klots" data-en="Our Specialists">Spetsialistid aamen ja klots</h2>
+  <h2 data-et="Meeskond" data-en="Our Team">Meeskond</h2>
   <div class="specialists">
     <div class="specialist-card">
       <img src="assets/img/ken.JPG" alt="Ken Rasmus Kuning">
       <h4>Ken Rasmus Kuning</h4>
-      <p>Varuosade spetsialist</p>
+      <p>Varuosade spetsialist /<br>muud teenused</p>
       <p>+372 5193 4129</p>
     </div>
     <div class="specialist-card">
       <img src="assets/img/margus.png" alt="Margus Palm">
       <h4>Margus Palm</h4>
       <p>Hooldustehnik</p>
-      <p>+372 5023767</p>
+      <p>+372 5023 767</p>
     </div>
   </div>
 </section>
@@ -105,7 +110,7 @@
         <p>KMKR nr: EE100983276</p>
       </div>
       <div class="footer-column2">
-        <p><strong>Kus ja millal</strong></p>
+        <p><strong>Võtame tehnikat vastu eelneval kokkuleppel</strong></p>
         <p>E-R 9:00-17:00</p>
         <p>Mustamäe tee 24a</p>
       </div>

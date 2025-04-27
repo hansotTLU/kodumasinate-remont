@@ -1,7 +1,7 @@
 #site-footer
-  background-color: #f8f8f8
-  padding: 20px 0
-  color: #333
+  background-color: $content
+  padding: 20px
+  color: $text
 
   .footer-container
     display: grid
@@ -11,6 +11,14 @@
     max-width: 1200px
     margin: auto
     grid-template-areas: "footer-column1 footer-column2 footer-column3"
+
+    @include responsive(mobile)
+            grid-template-columns: 1fr
+            grid-template-areas: "footer-column1" "footer-column2" "footer-column3"
+            gap: 50px
+            
+            .footer-column1, .footer-column2, .footer-column3
+              align-items: center
 
 
   .footer-column1

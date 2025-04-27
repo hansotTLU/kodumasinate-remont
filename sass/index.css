@@ -67,7 +67,7 @@
 
 #site-footer {
   background-color: #f8f8f8;
-  padding: 20px 0;
+  padding: 20px;
   color: #333;
 }
 #site-footer .footer-container {
@@ -78,6 +78,16 @@
   max-width: 1200px;
   margin: auto;
   grid-template-areas: "footer-column1 footer-column2 footer-column3";
+}
+@media (max-width: 700px) {
+  #site-footer .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "footer-column1" "footer-column2" "footer-column3";
+    gap: 50px;
+  }
+  #site-footer .footer-container .footer-column1, #site-footer .footer-container .footer-column2, #site-footer .footer-container .footer-column3 {
+    align-items: center;
+  }
 }
 #site-footer .footer-column1 {
   grid-area: footer-column1;

@@ -1,1 +1,12 @@
 // kõik komponendid, mida on vaja mõlemal lehel kasutada
+
+@mixin responsive($breakpoint)
+    @if $breakpoint == desktop
+        @media (min-width: 900px)
+            @content
+    @else if $breakpoint == tablet
+        @media (max-width: 899px)
+            @content
+    @else if $breakpoint == mobile
+        @media (max-width: 700px)
+            @content

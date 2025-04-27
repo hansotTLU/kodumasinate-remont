@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt</title>
+    <script src="js/language.js" defer></script>
   </head>
   <body>
     <header id="site-header">
@@ -20,15 +21,17 @@
         <button class="hamburger" id="hamburger">☰</button>
 
         <div class="nav-links">
-          <a href="index.html" class="nav-item">Avaleht</a>
-          <a href="contact.html" class="nav-item active">Kontakt</a>
+          <a href="index.html" class="nav-item" data-lang="home">Avaleht</a>
+          <a href="contact.html" class="nav-item active" data-lang="contact"
+            >Kontakt</a
+          >
         </div>
         <div class="lang-switch">
-          <a href="#" class="lang">
+          <a href="#" class="lang" id="english-lang">
             <img src="assets/img/english.png" alt="English" class="lang-flag" />
             English
           </a>
-          <a href="#" class="lang">
+          <a href="#" class="lang" id="estonian-lang">
             <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
             Eesti
           </a>
@@ -36,16 +39,23 @@
       </nav>
 
       <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" class="mobile-nav-item">Avaleht</a>
-        <a href="contact.html" class="mobile-nav-item">Kontakt</a>
+        <a href="index.html" class="mobile-nav-item" data-lang="home"
+          >Avaleht</a
+        >
+        <a
+          href="contact.html"
+          class="mobile-nav-item active"
+          data-lang="contact"
+          >Kontakt</a
+        >
         <div class="mobile-lang-switch">
-          <a href="#" class="mobile-lang">
-            <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
-            Eesti
-          </a>
-          <a href="#" class="mobile-lang">
+          <a href="#" class="mobile-lang" id="english-lang">
             <img src="assets/img/english.png" alt="English" class="lang-flag" />
             English
+          </a>
+          <a href="#" class="mobile-lang" id="estonian-lang">
+            <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
+            Eesti
           </a>
         </div>
       </div>
@@ -53,66 +63,70 @@
     <main id="contact-page">
       <div class="contact-container">
         <div class="contact-form">
-          <h2>Võta ühendust</h2>
+          <h2 data-lang="contactFormTitle">Võta ühendust</h2>
           <form>
-            <label for="name">Nimi</label>
+            <label for="name" data-lang="name">Nimi</label>
             <input type="text" id="name" name="name" required />
 
-            <label for="email">Email</label>
+            <label for="email" data-lang="email">Email</label>
             <input type="email" id="email" name="email" required />
 
-            <label for="phone">Aadress</label>
+            <label for="phone" data-lang="address">Aadress</label>
             <input type="text" id="address" name="address" required />
 
-            <label for="phone">Telefon</label>
+            <label for="phone" data-lang="phone">Telefon</label>
             <input type="tel" id="phone" name="phone" required />
 
-            <label for="product-type">Toote tüüp</label>
+            <label for="product-type" data-lang="productType">Toote tüüp</label>
             <input type="text" id="product-type" name="product-type" required />
 
-            <label for="brand">Bränd</label>
+            <label for="brand" data-lang="brand">Bränd</label>
             <input type="text" id="brand" name="brand" required />
 
-            <label for="model">Mudel</label>
+            <label for="model" data-lang="model">Mudel</label>
             <input type="text" id="model" name="model" />
 
-            <label for="phone">Veakirjeldus</label>
+            <label for="description" data-lang="description"
+              >Veakirjeldus</label
+            >
             <textarea id="description" name="description" required></textarea>
 
-            <label for="pnc">PNC või E-number</label>
+            <label for="pnc" data-lang="pnc">PNC või E-number</label>
             <input type="text" id="pnc" name="pnc" />
 
-            <button type="submit">Saada</button>
+            <button type="submit" data-lang="submit">Saada</button>
           </form>
         </div>
         <div class="contact-info">
           <div class="upper-info">
-            <h2>Kontakt</h2>
-            <p>
+            <h2 data-lang="contactHeader">Kontakt</h2>
+            <p data-lang="contactDescription">
               Helistades kirjelda probleemi võimalikult täpselt. Võibolla leiame
               lahenduse kohe.
             </p>
-            <h3>Teeninduspiirkond</h3>
-            <p>Tallinna ja Harjumaa</p>
+            <h3 data-lang="serviceArea">Teeninduspiirkond</h3>
+            <p data-lang="area">Tallinna ja Harjumaa</p>
 
-            <h3>Tööajad</h3>
-            <p>E-R 9:00-17:00</p>
-            <p>Kokkuleppel ka muudel aegadel</p>
+            <h3 data-lang="workingHours">Tööajad</h3>
+            <p data-lang="hours">E-R 9:00-17:00</p>
+            <p data-lang="hoursAdditional">Kokkuleppel ka muudel aegadel</p>
 
-            <h3>Aadress</h3>
-            <p>Mustamäe tee 24</p>
+            <h3 data-lang="addressHeader">Aadress</h3>
+            <p data-lang="addressDetail">Mustamäe tee 24</p>
 
-            <h3>Kontakt</h3>
+            <h3 data-lang="contactTitle">Kontakt</h3>
             <a href="mailto:recipient@example.com">marcserv@gmail.com</a>
-            <p>Margus Palm - Hooldustehnik</p>
+            <p data-lang="margusTitle">Margus Palm - Hooldustehnik</p>
             <a href="tel:+3725023767">+372 5023767</a>
-            <p>Ken Rasmus Kuning - Varuosade spetsialist</p>
+            <p data-lang="kenTitle">
+              Ken Rasmus Kuning - Varuosade spetsialist
+            </p>
             <a href="tel:+37251934129">+372 51934129</a>
           </div>
 
           <div class="lower-info">
-            <h3>Asukoht</h3>
-            <div id="map">Kaart siin</div>
+            <h3 data-lang="locationHeader">Asukoht</h3>
+            <div id="map" data-lang="map">Kaart siin</div>
           </div>
         </div>
       </div>
@@ -129,19 +143,19 @@
   <footer id="site-footer">
     <div class="footer-container">
       <div class="footer-column1">
-        <p><strong>Marcserv Kodumasin OÜ</strong></p>
-        <p>Registrikood: 16356420</p>
-        <p>KMKR nr: EE100983276</p>
+        <h3 data-lang="company"><strong>Marcserv Kodumasin OÜ</strong></h3>
+        <p data-lang="companyCode">Registrikood: 16356420</p>
+        <p data-lang="taxNumber">KMKR nr: EE100983276</p>
       </div>
       <div class="footer-column2">
-        <p><strong>Millal ja kus</strong></p>
-        <p>E-R 9:00-17:00</p>
-        <p>Mustamäe tee 24</p>
+        <h3 data-lang="whenWhere"><strong>Millal ja kus</strong></h3>
+        <p data-lang="workingHoursFooter">E-R 9:00-17:00</p>
+        <p data-lang="addressFooter">Mustamäe tee 24</p>
       </div>
       <div class="footer-column3">
-        <p><strong>Kontakt</strong></p>
-        <p>marcserv.hooldus@gmail.com</p>
-        <p>+372 5023767</p>
+        <h3 data-lang="contactFooter"><strong>Kontakt</strong></h3>
+        <p data-lang="emailFooter">marcserv.hooldus@gmail.com</p>
+        <p data-lang="phoneFooter">+372 5023767</p>
       </div>
     </div>
     <div class="copyright">

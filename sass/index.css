@@ -115,6 +115,10 @@
   background-color: #99ccff;
   color: #004080;
 }
+#site-header .mobile-menu .mobile-nav-item.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
 #site-header .mobile-menu .mobile-lang-switch {
   display: flex;
   flex-direction: column;

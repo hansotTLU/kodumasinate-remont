@@ -4,5 +4,119 @@
 @import 'header'
 @import 'footer'
 
-body
-  font-family: 'Arial', sans-serif
+main
+  flex: 1
+  padding: 30px
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-color: $content
+
+
+section
+  width: 100%
+  max-width: 1200px
+  background-color: $content
+  border-radius: 8px
+  padding: 30px
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05)
+  margin-bottom: 40px
+
+  h2, h3
+    text-align: center
+    color: $text
+    margin-bottom: 20px
+
+  p
+    text-align: center
+    color: $text
+    font-size: 16px
+    line-height: 1.6
+
+.services-and-brands
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 40px
+  margin-top: 40px
+
+  h2
+    font-size: 32px
+    color: $text
+    text-align: center
+    margin-bottom: 20px
+
+  .services-content-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-start
+    gap: 40px
+    width: 100%
+
+    .services-listing
+      flex: 1
+      min-width: 280px
+
+      ul
+        list-style-position: inside
+        padding: 0
+        font-size: 20px
+        color: $text
+
+        li
+          margin-bottom: 10px
+
+    .brand-logos
+      flex: 3
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 10px
+      justify-items: center
+      align-items: center
+
+      img
+        width: 180px
+        height: auto
+        transition: transform 0.3s ease
+
+        &:hover
+          transform: scale(1.1)
+
+
+
+
+  // Spetsialistid
+.specialists
+  margin-top: 30px
+  display: flex
+  flex-wrap: wrap
+  gap: 30px
+  justify-content: center
+
+  .specialist-card
+    background-color: white
+    border: 1px solid $border
+    border-radius: 12px
+    padding: 20px
+    width: 250px
+    text-align: center
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+
+    img
+      width: 120px
+      height: 120px
+      border-radius: 50%
+      object-fit: cover
+      margin-bottom: 15px
+
+    h4
+      margin: 10px 0 5px 0
+      font-size: 18px
+      color: $text-dark
+
+    p
+      font-size: 14px
+      color: $text
+
+

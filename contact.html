@@ -16,21 +16,39 @@
             class="logo"
           />
         </div>
+
+        <button class="hamburger" id="hamburger">☰</button>
+
         <div class="nav-links">
           <a href="index.html" class="nav-item">Avaleht</a>
           <a href="contact.html" class="nav-item active">Kontakt</a>
         </div>
         <div class="lang-switch">
           <a href="#" class="lang">
+            <img src="assets/img/english.png" alt="English" class="lang-flag" />
+            English
+          </a>
+          <a href="#" class="lang">
             <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
             Eesti
           </a>
-          <a href="#" class="lang">
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="mobile-nav-item">Avaleht</a>
+        <a href="contact.html" class="mobile-nav-item">Kontakt</a>
+        <div class="mobile-lang-switch">
+          <a href="#" class="mobile-lang">
+            <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
+            Eesti
+          </a>
+          <a href="#" class="mobile-lang">
             <img src="assets/img/english.png" alt="English" class="lang-flag" />
             English
           </a>
         </div>
-      </nav>
+      </div>
     </header>
     <main id="contact-page">
       <div class="contact-container">
@@ -99,6 +117,14 @@
         </div>
       </div>
     </main>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+      });
+    </script>
   </body>
   <footer id="site-footer">
     <div class="footer-container">

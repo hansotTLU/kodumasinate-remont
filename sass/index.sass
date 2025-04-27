@@ -69,43 +69,38 @@ section
         li
           margin-bottom: 5px
 
-    .brand-logos
+    .brand-logos //kahjuks ei ole ükski neist firmadest minu oma. kui oleks siis ma ilmselt ei kirjutaks seda koodi siin prg
       flex: 3
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 50px
       justify-items: center
-      align-items: center
+      align-items: center//sen nagu mart pool oleks iseendale penalti loonud
 
       img
-        width: 150px
+        width: 150px //eesti keeles imageeeee. oke pilt noh
         height: auto
-        transition: transform 0.3s ease
+        transition: transform 0.3s ease//transformerid sõitsid kuule selle valemiga
 
         &:hover
           transform: scale(1.1)
 
-      @media (max-width: 768px) // kui ekraan läheb väiksemaks
+      @media (max-width: 768px) // telo noh
         grid-template-columns: repeat(2, 1fr) // 2 logo kõrvuti
         gap: 50px // üldine gap ikka 10px
 
-      
-
-
-
-
   // Spetsialistid
 .specialists
-  margin-top: 30px
+  margin-top: 30px // spetsialistid ja värki
   display: flex
   flex-wrap: wrap
   gap: 30px
-  justify-content: center
+  justify-content: center // kirjutan kommentaari sest nii oli juhendis ette antud
 
   .specialist-card
     background-color: white
-    border: 1px solid $border
-    border-radius: 12px
+    border: 1px solid $border // see on tore asi
+    border-radius: 12px// see raadius on isegi väiksem kui mu vanaema oma
     padding: 20px
     width: 250px
     text-align: center

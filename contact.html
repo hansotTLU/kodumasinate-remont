@@ -17,8 +17,11 @@
     ></script>
   </head>
   <body>
+    <!-- Header -->
     <header id="site-header">
+      <!-- Nav elemendid -->
       <nav class="header-nav">
+        <!-- Logo -->
         <div class="logo-container">
           <img
             src="assets/img/marcserv_logo.png"
@@ -27,16 +30,20 @@
           />
         </div>
 
+        <!-- Menüü nupp (nähtav ainult telefonil) -->
         <button class="hamburger" id="hamburger" aria-label="Open menu">
           ☰
         </button>
 
+        <!-- Nav nupud (nähtav ainult arvutil) -->
         <div class="nav-links">
           <a href="index.html" class="nav-item" data-lang="home">Avaleht</a>
           <a href="contact.html" class="nav-item active" data-lang="contact"
             >Kontakt</a
           >
         </div>
+
+        <!-- Keele nupud (nähtav ainult arvutil) -->
         <div class="lang-switch">
           <a href="#" class="lang" id="english-lang">
             <img src="assets/img/english.png" alt="English" class="lang-flag" />
@@ -48,7 +55,9 @@
           </a>
         </div>
 
+        <!-- Telefoni header menüü -->
         <div class="mobile-menu" id="mobile-menu">
+          <!-- Nav nupud (nähtav ainult telefonil) -->
           <a href="index.html" class="mobile-nav-item" data-lang="home"
             >Avaleht</a
           >
@@ -58,6 +67,8 @@
             data-lang="contact"
             >Kontakt</a
           >
+
+          <!-- Keele nupud (nähtav ainult telefonil) -->
           <div class="mobile-lang-switch">
             <a href="#" class="mobile-lang" id="english-lang-mobile">
               <img
@@ -79,8 +90,11 @@
         </div>
       </nav>
     </header>
+
+    <!-- Põhi sisu -->
     <main id="contact-page">
       <div class="contact-container">
+        <!-- Kontakti vorm -->
         <div class="contact-form">
           <h2 data-lang="contactFormTitle">Võta ühendust</h2>
           <form action="#" aria-label="Contact form">
@@ -116,6 +130,8 @@
             <button type="submit" data-lang="submit">Saada</button>
           </form>
         </div>
+
+        <!-- Kontakti info -->
         <div class="contact-info">
           <div class="upper-info">
             <h2 data-lang="contactHeader">Kontakt</h2>
@@ -143,6 +159,7 @@
             <a href="tel:+37251934129">+372 51934129</a>
           </div>
 
+          <!-- Kaart -->
           <div class="lower-info">
             <h3 data-lang="locationHeader">Asukoht</h3>
             <div id="map" data-lang="map"></div>
@@ -150,6 +167,8 @@
         </div>
       </div>
     </main>
+
+    <!-- Footer -->
     <footer id="site-footer">
       <div class="footer-container">
         <div class="footer-column1">
@@ -172,6 +191,8 @@
         <p>&copy; 2025 Marcserv kodumasin OÜ</p>
       </div>
     </footer>
+
+    <!-- Lühemad js scriptid -->
     <script>
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobile-menu");

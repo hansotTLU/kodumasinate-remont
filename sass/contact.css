@@ -2,6 +2,8 @@
   background-color: #f6f6f6;
   border-bottom: 1px solid lightgray;
   padding: 10px 20px;
+  height: 60px;
+  align-content: center;
 }
 #site-header .header-nav {
   display: flex;

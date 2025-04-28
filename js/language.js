@@ -109,6 +109,6 @@ document
 // Check URL for language parameter on page load
 window.addEventListener("load", function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const lang = urlParams.get("lang") || "en"; // Default on on Eng kui ei lae
+  const lang = urlParams.get("lang") || "et"; // Default on on Eesti keel
   changeLanguage(lang);
 });

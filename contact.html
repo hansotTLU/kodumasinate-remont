@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt</title>
     <script src="js/language.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
   </head>
   <body>
     <header id="site-header">
@@ -126,7 +135,7 @@
 
           <div class="lower-info">
             <h3 data-lang="locationHeader">Asukoht</h3>
-            <div id="map" data-lang="map">Kaart siin</div>
+            <div id="map" data-lang="map"></div>
           </div>
         </div>
       </div>
@@ -137,6 +146,22 @@
 
       hamburger.addEventListener("click", () => {
         mobileMenu.classList.toggle("show");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        window.onload = function () {
+          const map = L.map("map").setView([59.4222, 24.7346], 13);
+
+          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors',
+          }).addTo(map);
+
+          L.marker([59.4222, 24.7346])
+            .addTo(map)
+            .bindPopup("Marcserv<br>Mustamäe tee 24")
+            .openPopup();
+        };
       });
     </script>
   </body>

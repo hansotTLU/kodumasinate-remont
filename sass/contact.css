@@ -43,6 +43,7 @@
   padding: 6px 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 #site-header .nav-links .nav-item:hover {
   background-color: #80bfff;
@@ -78,6 +79,8 @@
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 #site-header .lang-switch .lang:hover {
   background-color: #99ccff;
@@ -112,6 +115,7 @@
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 #site-header .mobile-menu .mobile-nav-item:hover {
   background-color: #99ccff;
@@ -137,6 +141,7 @@
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 #site-header .mobile-menu .mobile-lang-switch .mobile-lang:hover {
   background-color: #99ccff;
@@ -285,6 +290,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  font-family: Arial, sans-serif;
 }
 .contact-form form button {
   padding: 10px 20px;

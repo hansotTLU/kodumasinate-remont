@@ -99,7 +99,23 @@ document.getElementById("english-lang").addEventListener("click", function (e) {
 });
 
 document
+  .getElementById("english-lang-mobile")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.history.pushState({}, "", "?lang=en");
+    changeLanguage("en");
+  });
+
+document
   .getElementById("estonian-lang")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.history.pushState({}, "", "?lang=et");
+    changeLanguage("et");
+  });
+
+document
+  .getElementById("estonian-lang-mobile")
   .addEventListener("click", function (e) {
     e.preventDefault();
     window.history.pushState({}, "", "?lang=et");

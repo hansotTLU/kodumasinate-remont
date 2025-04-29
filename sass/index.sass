@@ -19,6 +19,22 @@ body
     align-items: center
     background-color: $content
 
+  .hero
+    width: 100%
+    height: 400px // Adjust this height as needed
+    overflow: hidden
+    position: relative
+
+  .hero-img
+    width: 100%
+    height: 100%
+    object-fit: cover // Ensures the image fills container and crops sides
+    display: block
+
+    // Edge fade mask
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
+
 
   section
     width: 100%

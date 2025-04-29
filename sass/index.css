@@ -255,11 +255,22 @@ section p {
 }
 
 .services-and-brands {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 1px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.services-and-brands::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
 }
 .services-and-brands h2 {
   font-size: 28px;
@@ -297,17 +308,6 @@ section p {
 .services-and-brands .services-content-wrapper .services-listing ul li {
   margin-bottom: 5px;
 }
-.services-and-brands .services-content-wrapper .services-listing .background-dot-global {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 300px;
-  height: auto;
-  opacity: 0.2;
-  z-index: -1;
-  pointer-events: none;
-  transform: translate(20%, 20%);
-}
 .services-and-brands .services-content-wrapper .brand-logos {
   flex: 3;
   display: grid;
@@ -331,6 +331,15 @@ section p {
   }
 }
 
+.sisu {
+  background-color: white;
+  border: 2px solid #3464e2;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 .specialists {
   margin-top: 30px;
   display: flex;
@@ -340,7 +349,7 @@ section p {
 }
 .specialists .specialist-card {
   background-color: white;
-  border: 1px solid #3464e2;
+  border: 2px solid #3464e2;
   border-radius: 12px;
   padding: 20px;
   width: 250px;
@@ -359,8 +368,6 @@ section p {
   margin: 10px 0 5px 0;
   font-size: 20px;
   color: #111111;
-}
-.specialists .specialist-card p {
   font-size: 18px;
   color: #333;
 }/*# sourceMappingURL=index.css.map */

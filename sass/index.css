@@ -276,6 +276,14 @@ body .services-and-brands {
   max-width: 90%;
   width: 100%;
 }
+body .services-and-brands .services-listing {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+body .services-and-brands .brand-logos {
+  padding-left: 30%;
+}
 body section {
   width: 100%;
   max-width: 1200px;

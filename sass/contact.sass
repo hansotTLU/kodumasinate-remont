@@ -4,6 +4,7 @@
 @import 'header'
 @import 'footer'
 
+// Põhi lehe asjad
 body
   font-family: 'Arial', sans-serif
   display: flex
@@ -11,6 +12,7 @@ body
   min-height: 100vh
   margin: 0
 
+  // Header asjad
 #site-header
   background-color: white
   border-bottom: 1px solid lightgray
@@ -19,6 +21,7 @@ body
   top: 0
   z-index: 1000
 
+  // Sisu osa
 .contact-container
   display: grid
   grid-template-columns: 1fr 1fr
@@ -27,17 +30,20 @@ body
   margin: 0 auto
   padding: 30px
 
+  // Vahetamine arvuti ja telefoni (+tableti) vahel
   @include responsive(mobile)
             grid-template-columns: 1fr
   @include responsive(tablet)
             gap: 20px
 
+  // Kontakti vormi asjad
 .contact-form
   padding: 20px
   background-color: $content
   border-radius: 8px
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
 
+  // Pealkiri
   h2
     font-size: 24px
     margin-bottom: 20px
@@ -62,6 +68,7 @@ body
       border: 1px solid $border
       border-radius: 4px
       font-size: 16px
+      font-family: Arial, sans-serif
 
     button
       padding: 10px 20px
@@ -74,11 +81,13 @@ body
       &:hover
         background-color: $button-hover
 
+  // Kontakti info
 .contact-info
   display: flex
   flex-direction: column
   gap: 20px
 
+  // Info ülemise osa asjad
   .upper-info
     h2
       font-size: 24px
@@ -92,6 +101,7 @@ body
       font-size: 16px
       color: $text
 
+  // Info alumise osa asjad (kaart)
   .lower-info
     #map
       width: 100%

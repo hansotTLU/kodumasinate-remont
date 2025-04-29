@@ -99,7 +99,23 @@ document.getElementById("english-lang").addEventListener("click", function (e) {
 });
 
 document
+  .getElementById("english-lang-mobile")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.history.pushState({}, "", "?lang=en");
+    changeLanguage("en");
+  });
+
+document
   .getElementById("estonian-lang")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.history.pushState({}, "", "?lang=et");
+    changeLanguage("et");
+  });
+
+document
+  .getElementById("estonian-lang-mobile")
   .addEventListener("click", function (e) {
     e.preventDefault();
     window.history.pushState({}, "", "?lang=et");
@@ -109,6 +125,6 @@ document
 // Check URL for language parameter on page load
 window.addEventListener("load", function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const lang = urlParams.get("lang") || "en"; // Default on on Eng kui ei lae
+  const lang = urlParams.get("lang") || "et"; // Default on on Eesti keel
   changeLanguage(lang);
 });

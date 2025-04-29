@@ -2,6 +2,8 @@
   background-color: #f6f6f6;
   border-bottom: 1px solid lightgray;
   padding: 10px 20px;
+  height: 60px;
+  align-content: center;
 }
 #site-header .header-nav {
   display: flex;
@@ -41,6 +43,7 @@
   padding: 6px 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 #site-header .nav-links .nav-item:hover {
   background-color: #80bfff;
@@ -76,6 +79,8 @@
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 #site-header .lang-switch .lang:hover {
   background-color: #99ccff;
@@ -110,6 +115,7 @@
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 #site-header .mobile-menu .mobile-nav-item:hover {
   background-color: #99ccff;
@@ -135,6 +141,7 @@
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 #site-header .mobile-menu .mobile-lang-switch .mobile-lang:hover {
   background-color: #99ccff;

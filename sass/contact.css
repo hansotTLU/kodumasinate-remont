@@ -23,7 +23,7 @@
   font-size: 28px;
   cursor: pointer;
   display: none;
-  color: #0066cc;
+  color: #3464e2;
 }
 #site-header .nav-links {
   display: flex;
@@ -31,7 +31,7 @@
   justify-content: center;
 }
 #site-header .nav-links .nav-item {
-  color: #0066cc;
+  color: #3464e2;
   text-decoration: none;
   text-align: center;
   font-weight: 600;
@@ -43,8 +43,8 @@
   transition: all 0.3s ease;
 }
 #site-header .nav-links .nav-item:hover {
-  background-color: #80bfff;
-  color: #004080;
+  background-color: #d0dbf8;
+  color: #1943b0;
 }
 #site-header .nav-links .nav-item::after {
   content: "";
@@ -52,7 +52,7 @@
   margin: auto;
   height: 2px;
   width: 0;
-  background: #0066cc;
+  background: #3464e2;
   transition: width 0.3s;
 }
 #site-header .nav-links .nav-item:hover::after {
@@ -68,7 +68,7 @@
   align-items: center;
 }
 #site-header .lang-switch .lang {
-  color: #0066cc;
+  color: #3464e2;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
@@ -78,8 +78,8 @@
   transition: background-color 0.3s;
 }
 #site-header .lang-switch .lang:hover {
-  background-color: #99ccff;
-  color: #004080;
+  background-color: #e7ecfc;
+  color: #1943b0;
 }
 #site-header .lang-switch .lang-flag {
   width: 22px;
@@ -103,7 +103,7 @@
   width: 200px;
 }
 #site-header .mobile-menu .mobile-nav-item {
-  color: #0066cc;
+  color: #3464e2;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
@@ -112,8 +112,8 @@
   transition: background-color 0.3s;
 }
 #site-header .mobile-menu .mobile-nav-item:hover {
-  background-color: #99ccff;
-  color: #004080;
+  background-color: #e7ecfc;
+  color: #1943b0;
 }
 #site-header .mobile-menu .mobile-nav-item.active {
   font-weight: bold;
@@ -127,7 +127,7 @@
   align-items: center;
 }
 #site-header .mobile-menu .mobile-lang-switch .mobile-lang {
-  color: #0066cc;
+  color: #3464e2;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
@@ -137,8 +137,8 @@
   transition: background-color 0.3s;
 }
 #site-header .mobile-menu .mobile-lang-switch .mobile-lang:hover {
-  background-color: #99ccff;
-  color: #004080;
+  background-color: #e7ecfc;
+  color: #1943b0;
 }
 #site-header .mobile-menu .lang-flag {
   width: 22px;
@@ -273,20 +273,20 @@ body {
 }
 .contact-form form input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #3464e2;
   border-radius: 4px;
   font-size: 16px;
 }
 .contact-form form textarea {
   resize: vertical;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #3464e2;
   border-radius: 4px;
   font-size: 16px;
 }
 .contact-form form button {
   padding: 10px 20px;
-  background-color: #0066cc;
+  background-color: #3464e2;
   color: white;
   border: none;
   border-radius: 4px;

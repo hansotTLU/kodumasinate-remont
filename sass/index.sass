@@ -27,7 +27,7 @@ body
 
   .hero-img
     width: 100%
-    height: 100%
+    height: 500px
     object-fit: cover // Ensures the image fills container and crops sides
     display: block
 
@@ -35,6 +35,17 @@ body
     mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
 
+  .services-and-brands
+    position: absolute
+    top: 50% // adjust this for vertical placement
+    left: 50%
+    transform: translate(-50%, -50%) // perfectly center the box
+    background: rgba(255, 255, 255, 0.6) // optional: semi-transparent white background
+    padding: 20px
+    border-radius: 8px
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+    max-width: 90%
+    width: 100%
 
   section
     width: 100%

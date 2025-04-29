@@ -37,6 +37,30 @@ const languages = {
     contactFooter: "Contact",
     emailFooter: "marcserv.hooldus@gmail.com",
     phoneFooter: "+372 5023767",
+
+    // index.html
+    title: "Home Appliance Repair and Maintenance",
+    description1:
+      "Our main activity is the repair and maintenance of small household appliances. We also offer assistance through specialists focused on other appliances.",
+    description2:
+      "Thanks to our long experience in appliance repair, we’re familiar with all kinds of problems and know how to solve them so you don't have to search on your own.",
+    description3:
+      "We operate in Tallinn and Harjumaa. Other areas by agreement.",
+    description4:
+      "Most work is done at the client's home. For more complex or time-consuming repairs, we take the device to our workshop.",
+    description5:
+      "For simpler repair work, consider a €60 visit fee. Additional charges may apply for new parts and/or extended labor at €25/hour (VAT included).",
+    servicesAndBrands: "We service the following devices and brands:",
+    airpurifier: "Air purifiers",
+    stoves: "Stoves",
+    stovetops: "Cooktops",
+    ovens: "Ovens",
+    microwaveOvens: "Microwave ovens",
+    coffeeMachines: "Coffee machines",
+    vacuums: "Vacuum cleaners",
+    specialist: "Spare parts specialist",
+    otherServices: "Other services",
+    techician: "Service Technician",
   },
   et: {
     home: "Avaleht",
@@ -76,6 +100,30 @@ const languages = {
     contactFooter: "Kontakt",
     emailFooter: "marcserv.hooldus@gmail.com",
     phoneFooter: "+372 5023767",
+
+    // index.html
+    title: "Kodumasinate remont ja hooldus",
+    description1:
+      "Meie peamiseks tegevusalaks on väikeste kodumasinate remont ja hooldus. Pakume ka abiks teistele kodumasinatele spetsialiseerunud remondi- ja hooldusspetsialiste.",
+    description2:
+      "Tänu pikaajalisele kogemusele kodumasinate remondi alal oleme kursis kõikvõimalike probleemidega ning teame kuidas leida lahendus, et sina ei peaks pead murdma ja lahendust omal käel otsima.",
+    description3:
+      "Teostame tööd Tallinnas ja Harjumaal, kaugemad piirkonnad kokkuleppel.",
+    description4:
+      "Enamasti toimub hooldus ja remont kliendi kodus. Keerulisemate ja pikemat lahendust nõudvate tööde puhul toimetame seadme töökotta.",
+    description5:
+      "Lihtsama remonditöö puhul tuleks arvestada 60 eurose visiiditasuga kuhu võib lisanduda uue varuosa hind ja/või pikema remonditöö tunnitasu 25 eurot (hind sisaldab käibemaksu).",
+    servicesAndBrands: "Teenindame järgmisi seadmeid ja brände:",
+    airpurifier: "Õhupuhastid",
+    stoves: "Pliidid",
+    stovetops: "Pliidiplaadid",
+    ovens: "Ahjud",
+    microwaveOvens: "Mikrolaineahjud",
+    coffeeMachines: "Kohvimasinad",
+    vacuums: "Tolmuimejad",
+    specialist: "Varuosade spetsialist",
+    otherServices: "Muud teenused",
+    techician: "Hooldustehnik",
   },
 };
 

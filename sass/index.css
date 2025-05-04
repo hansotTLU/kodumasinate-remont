@@ -1,6 +1,6 @@
 #site-header {
   background-color: #f6f6f6;
-  border-bottom: 1px solid #3464e2;
+  border-bottom: 1px solid lightgray;
   padding: 10px 20px;
   height: 60px;
   align-content: center;
@@ -102,8 +102,7 @@
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #3464e2;
+  border-radius: 8px;
   flex-direction: column;
   gap: 16px;
   z-index: 100;
@@ -172,6 +171,7 @@
   background-color: #e3e3e3;
   padding: 20px;
   color: #333;
+  border-top: 1px solid #3464e2;
 }
 #site-footer .footer-container {
   justify-content: center;
@@ -278,6 +278,7 @@ body .services-and-brands {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   max-width: 90%;
   width: 100%;
+  border: 1px solid #3464e2;
 }
 body .services-and-brands .brand-logos {
   padding-left: 30%;

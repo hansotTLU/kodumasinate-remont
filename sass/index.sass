@@ -13,7 +13,6 @@ body
 
   main
     flex: 1
-    padding: 10px
     display: flex
     flex-direction: column
     align-items: center
@@ -35,111 +34,196 @@ body
     mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
 
+  .repair-info
+    border: 1px solid $border // see on tore asi
+    border-radius: 12px// see raadius on isegi väiksem kui mu vanaema oma
+    padding: 5px
+    width: 80%  //juhuks kui spetsalistile ei meeldi siis sellega saab kasti ümber
+    text-align: center
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+
+    @include responsive(mobile)
+      margin-top: 240px////////////////////////////////////////////
+
   .services-and-brands
     position: absolute
-    top: 50% // adjust this for vertical placement
-    left: 50%
-    transform: translate(-50%, -50%) // perfectly center the box
-    background: rgba(255, 255, 255, 0.6) // optional: semi-transparent white background
+    top: 15% // adjust this for vertical placement
+    // transform: translate(-50%, -50%) // perfectly center the box
+    background: rgba(255, 255, 255, 0.7) // optional: semi-transparent white background
     padding: 20px
-    border-radius: 8px
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
     max-width: 90%
-    width: 100%
+    width: 60%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 15px
+    border: 1px solid $border
+      
+    @include responsive(mobile)
+      border: none
+      background: none
+      box-shadow: none
+      gap: 0px
 
-    .services-listing
+    @include responsive(tablet)
       position: absolute
-      top: 15%
-      left: 5%
+      top: 15% // adjust this for vertical placement
+      // transform: translate(-50%, -50%) // perfectly center the box
+      background: rgba(255, 255, 255, 0.7) // optional: semi-transparent white background
+      padding: 20px
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+      max-width: 90%
+      width: 80%
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 0px
+      border: 1px solid $border
+
+
     
     .brand-logos
       padding-left: 30%
 
+
   section
     width: 100%
-    max-width: 1200px
     background-color: $content
-    border-radius: 8px
-    padding: 1px
-    //box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05)
-    margin-bottom: 10px
-
-    h2, h3
-      text-align: center
-      color: $text
-      margin-bottom: 20px
+    border-radius: 12px
+    margin-bottom: 15px
 
     p
       text-align: center
       color: $text
       font-size: 16px
-      line-height: 1.6
+      //line-height: 1.6     akki kunagi tuleb huvi tagasi panna
 
-  .services-and-brands
-    display: flex
-    flex-direction: column
-    align-items: center
-    gap: 20px
-    margin-top: 1px
 
     h2
       font-size: 28px
       color: $text
       text-align: center
       margin-bottom: 20px
+      border-radius: 10px
+
+    h1
+      font-size: 28px
+      color: #252525
+      text-align: center
+      margin-bottom: 20px
+      border-radius: 10px
+      text-shadow: 0px 0px 10px rgb(255, 255, 255)
+
+
 
     .services-content-wrapper
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      align-items: flex-start
-      gap: 40px
-      width: 100%
+      // display: flex
+      // flex-wrap: wrap
+      // justify-content: center
+      // align-items: flex-start
+      // gap: 40px
+      width: 85%
+
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      grid-template-areas: "list one two three" "list four five six" "list seven eight -"
+      gap: 4%
+      justify-items: center
+      align-items: center
+
+      @include responsive(mobile)
+        //display: flex
+        // flex-wrap: wrap
+        justify-content: center
+        // align-items: flex-start
+        gap: 20px
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: auto auto auto auto
+        grid-template-areas: "list list list" "one two three" "four five six" "seven eight -"
+        row-gap: 45px
+        justify-items: center
+        align-items: center
+        object-fit: cover
+
+      @include responsive(tablet)
+        //display: flex
+        // flex-wrap: wrap
+        justify-content: center
+        // align-items: flex-start
+        gap: 20px
+        width: 10%
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: auto auto auto auto
+        grid-template-areas: "list one two" "list three four" "list five six" "list seven eight"
+        row-gap: 0px
+        justify-items: center
+        align-items: center
+        object-fit: cover
 
       .services-listing // masinad
-        flex: 1
         min-width: 280px
+        grid-area: list
+
+        @include responsive(mobile)
+          border: 1px solid $border
+          background: rgba(255, 255, 255, 0.7)
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+          border-radius: 12px
 
         ul
           list-style-position: inside
-          padding: 10px
           font-size: 22px
           color: $text
           font-weight: bold
           line-height: 1.3 // reavahe
-          border-radius: 5px         // pehmed nurgad (valikuline)
 
-          .background-dot
-            position: absolute
-            //top: 27%
-            //left: -3%
-            transform: translate(-38%, -34%)
-            opacity: 0.4
-            z-index: 0 // Täpp läheb kõige taha
 
           li
             margin-bottom: 5px
 
+      img
+        max-width: 180px
+        width: 110% //eesti keeles imageeeee. oke pilt noh
+        min-width: 80px
+        height: auto
+        transition: transform 0.3s ease//transformerid sõitsid kuule selle valemiga
 
-      .brand-logos //kahjuks ei ole ükski neist firmadest minu oma. kui oleks siis ma ilmselt ei kirjutaks seda koodi siin prg
-        flex: 3
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        gap: 50px
-        justify-items: center
-        align-items: center//sen nagu mart pool oleks iseendale penalti loonud
+        @include responsive(tablet)
+          max-width: 180px
+          width: 100% //eesti keeles imageeeee. oke pilt noh//////////////////////////////////////////////////////////
+          min-width: 120px
 
-        img
-          width: 150px //eesti keeles imageeeee. oke pilt noh
-          height: auto
-          transition: transform 0.3s ease//transformerid sõitsid kuule selle valemiga
+        &:hover
+          transform: scale(1.1)
 
-          &:hover
-            transform: scale(1.1)
+      .Electrolux
+        grid-area: one
 
-        @media (max-width: 768px) // telo noh
-          grid-template-columns: repeat(2, 1fr) // 2 logo kõrvuti
-          gap: 50px // üldine gap ikka 10px
+      .Bosch
+        grid-area: two
+
+      .Smeg
+        grid-area: three
+
+      .AEG
+        grid-area: four
+
+      .Falmec
+        grid-area: five
+
+      .Zanussi
+        grid-area: six
+      
+      .Neff
+        grid-area: seven
+      
+      .Siemens
+        grid-area: eight
 
     // Spetsialistid
   .specialists
@@ -171,5 +255,5 @@ body
         color: $text-dark
 
         p
-        font-size: 18px
-        color: $text
+          font-size: 18px
+          color: $text

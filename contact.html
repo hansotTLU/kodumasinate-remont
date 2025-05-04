@@ -7,15 +7,6 @@
     <title>Kontakt</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <script src="js/language.js" defer></script>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      defer
-    ></script>
   </head>
   <body>
     <!-- Header -->
@@ -163,7 +154,13 @@
           <!-- Kaart -->
           <div class="lower-info">
             <h3 data-lang="locationHeader">Asukoht</h3>
-            <div id="map" data-lang="map"></div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.9047560029492!2d24.690725377385263!3d59.41798370392098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f587ea844d%3A0xd15b07c332b1dd60!2sMustam%C3%A4e%20tee%2024%2C%2010621%20Tallinn!5e0!3m2!1set!2see!4v1746356817982!5m2!1set!2see"
+              class="map-embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -200,22 +197,6 @@
 
       hamburger.addEventListener("click", () => {
         mobileMenu.classList.toggle("show");
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        window.onload = function () {
-          const map = L.map("map").setView([59.4222, 24.7346], 13);
-
-          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            maxZoom: 19,
-            attribution: "&copy; OpenStreetMap contributors",
-          }).addTo(map);
-
-          L.marker([59.4222, 24.7346])
-            .addTo(map)
-            .bindPopup("Marcserv<br>Mustamäe tee 24")
-            .openPopup();
-        };
       });
     </script>
   </body>

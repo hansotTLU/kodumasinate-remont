@@ -2,10 +2,10 @@
 
 @mixin responsive($breakpoint)
     @if $breakpoint == desktop
-        @media (min-width: 1000px)
+        @media (min-width: 1050px)
             @content
     @else if $breakpoint == tablet
-        @media (max-width: 999px)
+        @media (max-width: 1049px)
             @content
     @else if $breakpoint == mobile
         @media (max-width: 720px)

@@ -158,6 +158,11 @@
      object-fit: contain;
   border-radius: 2px;
 }
+@media (max-width: 1049px) {
+  #site-header .nav-links {
+    padding-left: 10px;
+  }
+}
 @media (max-width: 720px) {
   #site-header .hamburger {
     display: block;

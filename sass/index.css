@@ -183,6 +183,10 @@
   margin: auto;
   grid-template-areas: "footer-column1 footer-column2 footer-column3";
 }
+#site-footer .footer-container h1 {
+  font-size: 20px;
+  margin-top: 20px;
+}
 @media (max-width: 1049px) {
   #site-footer .footer-container {
     gap: 50px;

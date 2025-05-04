@@ -183,6 +183,10 @@
   margin: auto;
   grid-template-areas: "footer-column1 footer-column2 footer-column3";
 }
+#site-footer .footer-container h1 {
+  font-size: 20px;
+  margin-top: 20px;
+}
 @media (max-width: 1049px) {
   #site-footer .footer-container {
     gap: 50px;
@@ -278,7 +282,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.contact-form h2 {
+.contact-form h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -326,10 +330,6 @@ body {
   padding-right: 20px;
 }
 .contact-info .upper-info h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.contact-info .upper-info h3 {
   font-size: 20px;
   margin-top: 20px;
 }

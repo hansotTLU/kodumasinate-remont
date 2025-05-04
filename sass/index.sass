@@ -6,31 +6,31 @@
 
 body
   font-family: Arial, sans-serif
-  display: flex
-  flex-direction: column
+  display: flex // teeme kogu keha flex-iks
+  flex-direction: column // et kõik asjad oleksid üksteise all, mitte kõrval
   min-height: 100vh
-  margin: 0
+  margin: 0 // nullime veebis vaikimisi ääred
 
   main
     flex: 1
     display: flex
     flex-direction: column
     align-items: center
-    background-color: $content
+    background-color: $content // taustavärv tuleb teisest failist. lahe ju
 
   .hero
     width: 100%
-    height: 400px // Adjust this height as needed
-    overflow: hidden
+    height: 400px // pilt mingi kindla kõrgusega
+    overflow: hidden // kui midagi jääb välja, peidame ära
     position: relative
 
   .hero-img
     width: 100%
     height: 500px
-    object-fit: cover // Ensures the image fills container and crops sides
+    object-fit: cover // pilt katab ala täpselt, vajadusel lõikab ära
     display: block
 
-    // Edge fade mask
+    // pildi äärtes hajutatud mask – et üleminek oleks sujuvam
     mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
 
@@ -43,7 +43,7 @@ body
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
 
     @include responsive(mobile)
-      margin-top: 240px////////////////////////////////////////////
+      margin-top: 240px// et telos ei sõidaks asjad kokku
 
   .services-and-brands
     position: absolute
@@ -68,11 +68,10 @@ body
 
     @include responsive(tablet)
       position: absolute
-      top: 15% // adjust this for vertical placement
-      // transform: translate(-50%, -50%) // perfectly center the box
-      background: rgba(255, 255, 255, 0.7) // optional: semi-transparent white background
+      top: 15% // kui kaugel ülevalt see kast on
+      background: rgba(255, 255, 255, 0.7) // läbipaistva valgega taust
       padding: 20px
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) // väike varjund, et kast tõuseks taustast esile
       max-width: 90%
       width: 80%
       display: flex
@@ -84,7 +83,7 @@ body
 
     
     .brand-logos
-      padding-left: 30%
+      padding-left: 30% // logosid lükkame veidi paremale
 
 
   section
@@ -118,13 +117,7 @@ body
 
 
     .services-content-wrapper
-      // display: flex
-      // flex-wrap: wrap
-      // justify-content: center
-      // align-items: flex-start
-      // gap: 40px
       width: 85%
-
       display: grid
       grid-template-columns: 1fr 1fr 1fr 1fr
       grid-template-rows: 1fr 1fr 1fr
@@ -134,10 +127,7 @@ body
       align-items: center
 
       @include responsive(mobile)
-        //display: flex
-        // flex-wrap: wrap
         justify-content: center
-        // align-items: flex-start
         gap: 20px
         width: 100%
         display: grid
@@ -150,10 +140,7 @@ body
         object-fit: cover
 
       @include responsive(tablet)
-        //display: flex
-        // flex-wrap: wrap
         justify-content: center
-        // align-items: flex-start
         gap: 20px
         width: 10%
         display: grid
@@ -186,20 +173,20 @@ body
           li
             margin-bottom: 5px
 
-      img
+      img //see on pilt
         max-width: 180px
-        width: 110% //eesti keeles imageeeee. oke pilt noh
+        width: 110% 
         min-width: 80px
         height: auto
-        transition: transform 0.3s ease//transformerid sõitsid kuule selle valemiga
+        transition: transform 0.3s ease //transformerid sõitsid kuule selle valemiga
 
         @include responsive(tablet)
           max-width: 180px
-          width: 100% //eesti keeles imageeeee. oke pilt noh//////////////////////////////////////////////////////////
-          min-width: 120px
+          width: 100%
+          min-width: 120px //norm jauramine oli sellega. ei soovita. aga norm nüüd. sujuv
 
         &:hover
-          transform: scale(1.1)
+          transform: scale(1.1)// teeb suuremaks – suht lahe. Tglt võiks lingid ka siis juurde panan et vajutada saaks aag kelle on 1 öösel. aitab küll vms.
 
       .Electrolux
         grid-area: one
@@ -225,18 +212,18 @@ body
       .Siemens
         grid-area: eight
 
-    // Spetsialistid
+    // Spetsialistid töömehed
   .specialists
-    margin-top: 30px // spetsialistid ja värki
+    margin-top: 30px
     display: flex
     flex-wrap: wrap
     gap: 30px
     justify-content: center // kirjutan kommentaari sest nii oli juhendis ette antud
 
-    .specialist-card
+    .specialist-card //nende info koos pildigakaardil
       background-color: white
       border: 1px solid $border // see on tore asi
-      border-radius: 12px// see raadius on isegi väiksem kui mu vanaema oma
+      border-radius: 12px// see raadius on isegi suht väike
       padding: 20px
       width: 250px
       text-align: center
@@ -245,7 +232,7 @@ body
       img
         width: 120px
         height: 120px
-        border-radius: 50%
+        border-radius: 50% // teeme profiilipildid ümmargused
         object-fit: cover
         margin-bottom: 15px
 
@@ -256,4 +243,4 @@ body
 
         p
           font-size: 18px
-          color: $text
+          color: $text //Hugo Toom

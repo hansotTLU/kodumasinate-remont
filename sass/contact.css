@@ -1,9 +1,12 @@
 #site-header {
-  background-color: #f6f6f6;
-  border-bottom: 1px solid lightgray;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #3464e2;
   padding: 10px 20px;
   height: 60px;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 #site-header .header-nav {
   display: flex;

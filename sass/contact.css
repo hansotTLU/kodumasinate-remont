@@ -158,9 +158,18 @@
      object-fit: contain;
   border-radius: 2px;
 }
-@media (max-width: 1049px) {
+@media (min-width: 721px) and (max-width: 1049px) {
   #site-header .nav-links {
     padding-left: 10px;
+  }
+  #site-header .logo-container {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  #site-header .logo-container .logo {
+    height: 40px;
+    width: auto;
   }
 }
 @media (max-width: 720px) {

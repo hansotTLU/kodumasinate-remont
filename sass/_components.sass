@@ -5,7 +5,7 @@
         @media (min-width: 1050px)
             @content
     @else if $breakpoint == tablet
-        @media (max-width: 1049px)
+        @media (min-width: 721px) and (max-width: 1049px)
             @content
     @else if $breakpoint == mobile
         @media (max-width: 720px)

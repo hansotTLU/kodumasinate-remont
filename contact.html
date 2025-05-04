@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="sass/contact.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <script src="js/language.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="site-header">
+      <!-- Nav elemendid -->
+      <nav class="header-nav">
+        <!-- Logo -->
+        <div class="logo-container">
+          <img
+            src="assets/img/marcserv_logo.png"
+            alt="Marcserv logo"
+            class="logo"
+          />
+        </div>
+
+        <!-- Menüü nupp (nähtav ainult telefonil) -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          ☰
+        </button>
+
+        <!-- Nav nupud (nähtav ainult arvutil) -->
+        <div class="nav-links">
+          <a href="index.html" class="nav-item" data-lang="home">Avaleht</a>
+          <a href="contact.html" class="nav-item active" data-lang="contact"
+            >Kontakt</a
+          >
+        </div>
+
+        <!-- Keele nupud (nähtav ainult arvutil) -->
+        <div class="lang-switch">
+          <a href="#" class="lang" id="english-lang">
+            <img src="assets/img/english.png" alt="English" class="lang-flag" />
+            English
+          </a>
+          <a href="#" class="lang" id="estonian-lang">
+            <img src="assets/img/estonian.png" alt="Eesti" class="lang-flag" />
+            Eesti
+          </a>
+        </div>
+
+        <!-- Telefoni header menüü -->
+        <div class="mobile-menu" id="mobile-menu">
+          <!-- Nav nupud (nähtav ainult telefonil) -->
+          <a href="index.html" class="mobile-nav-item" data-lang="home"
+            >Avaleht</a
+          >
+          <a
+            href="contact.html"
+            class="mobile-nav-item active"
+            data-lang="contact"
+            >Kontakt</a
+          >
+
+          <!-- Keele nupud (nähtav ainult telefonil) -->
+          <div class="mobile-lang-switch">
+            <a href="#" class="mobile-lang" id="english-lang-mobile">
+              <img
+                src="assets/img/english.png"
+                alt="English"
+                class="lang-flag"
+              />
+              English
+            </a>
+            <a href="#" class="mobile-lang" id="estonian-lang-mobile">
+              <img
+                src="assets/img/estonian.png"
+                alt="Eesti"
+                class="lang-flag"
+              />
+              Eesti
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Põhi sisu -->
+    <main id="contact-page">
+      <div class="contact-container">
+        <!-- Kontakti vorm -->
+        <section class="contact-form" aria-label="Contact form">
+          <h1 data-lang="contactFormTitle">Võta ühendust</h1>
+          <form action="#" aria-label="Contact form">
+            <label for="name" data-lang="name">Nimi</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email" data-lang="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="address" data-lang="address">Aadress</label>
+            <input type="text" id="address" name="address" required />
+
+            <label for="phone" data-lang="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="product-type" data-lang="productType">Toote tüüp</label>
+            <input type="text" id="product-type" name="product-type" required />
+
+            <label for="brand" data-lang="brand">Bränd</label>
+            <input type="text" id="brand" name="brand" required />
+
+            <label for="model" data-lang="model">Mudel</label>
+            <input type="text" id="model" name="model" />
+
+            <label for="description" data-lang="description"
+              >Veakirjeldus</label
+            >
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="pnc" data-lang="pnc">PNC või E-number</label>
+            <input type="text" id="pnc" name="pnc" />
+
+            <button type="submit" data-lang="submit">Saada</button>
+          </form>
+        </section>
+
+        <!-- Kontakti info -->
+        <section class="contact-info" aria-label="Contact info">
+          <div class="upper-info">
+            <h1 data-lang="contactHeader" aria-label="Contact title">
+              Kontakt
+            </h1>
+            <p data-lang="contactDescription">
+              Helistades kirjelda probleemi võimalikult täpselt. Võibolla leiame
+              lahenduse kohe.
+            </p>
+            <h2 data-lang="serviceArea" aria-label="Service area">
+              Teeninduspiirkond
+            </h2>
+            <p data-lang="area">Tallinn ja Harjumaa</p>
+
+            <h2 data-lang="workingHours" aria-label="Work hours">Tööajad</h2>
+            <p data-lang="hours">E-R 9:00-17:00</p>
+            <p data-lang="hoursAdditional">Kokkuleppel ka muudel aegadel</p>
+
+            <h2 data-lang="addressHeader" aria-label="Address">Aadress</h2>
+            <p data-lang="addressDetail">Mustamäe tee 24a</p>
+
+            <h2 data-lang="contactTitle" aria-label="Contact">Kontakt</h2>
+            <a href="mailto:marcserv.hooldus@gmail.com"
+              >marcserv.hooldus@gmail.com</a
+            >
+            <br /><br />
+            <p data-lang="margusTitle">Margus Palm - Hooldustehnik</p>
+            <a href="tel:+3725023767">+372 5023767</a>
+            <br /><br />
+            <p data-lang="kenTitle">
+              Ken Rasmus Kuning - Varuosade spetsialist
+            </p>
+            <a href="tel:+37251934129">+372 51934129</a>
+          </div>
+
+          <!-- Kaart -->
+          <div class="lower-info">
+            <h2 data-lang="locationHeader" aria-label="Location map">
+              Asukoht
+            </h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.9047560029492!2d24.690725377385263!3d59.41798370392098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f587ea844d%3A0xd15b07c332b1dd60!2sMustam%C3%A4e%20tee%2024%2C%2010621%20Tallinn!5e0!3m2!1set!2see!4v1746356817982!5m2!1set!2see"
+              class="map-embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+      <div class="footer-container">
+        <div class="footer-column1">
+          <h1 data-lang="company">Marcserv Kodumasin OÜ</h1>
+          <p data-lang="companyCode">Registrikood: 16356420</p>
+          <p data-lang="taxNumber">KMKR nr: EE100983276</p>
+        </div>
+        <div class="footer-column2">
+          <h1 data-lang="whenWhere">Millal ja kus</h1>
+          <p data-lang="workingHoursFooter">E-R 9:00-17:00</p>
+          <p data-lang="addressFooter">Mustamäe tee 24</p>
+        </div>
+        <div class="footer-column3">
+          <h1 data-lang="contactFooter">Kontakt</h1>
+          <p data-lang="emailFooter">marcserv.hooldus@gmail.com</p>
+          <p data-lang="phoneFooter">+372 5023767</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Marcserv kodumasin OÜ</p>
+      </div>
+    </footer>
+
+    <!-- Lühemad js scriptid -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

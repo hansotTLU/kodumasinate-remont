@@ -1,0 +1,180 @@
+#site-header
+  background-color: $header
+  border-bottom: 1px solid $border
+  padding: 10px 20px
+  height: 60px
+  align-content: center
+  position: sticky
+  top: 0
+  z-index: 999
+
+  .header-nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .logo-container
+    display: flex
+    align-items: baseline
+    gap: 10px
+
+    .logo
+      height: 70px
+      width: auto
+
+  .hamburger
+    background: none
+    border: none
+    font-size: 28px
+    cursor: pointer
+    display: none
+    color: $button
+
+  .nav-links
+    display: flex
+    gap: 20px
+    justify-content: center
+    padding-left: 10px
+
+    .nav-item
+      color: $button
+      text-decoration: none
+      text-align: center
+      font-weight: 600
+      font-size: 16px
+      width: 70px
+      height: 25px
+      padding: 6px 10px
+      border-radius: 6px
+      transition: all 0.3s ease
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+
+      &:hover
+        background-color: lighten($button, 35%)
+        color: darken($button, 15%)
+
+      &::after
+        content: ''
+        display: block
+        margin: auto
+        height: 2px
+        width: 0
+        background: $button
+        transition: width 0.3s
+
+      &:hover::after
+        width: 100%
+
+      &.active
+        font-weight: bold
+        text-decoration: underline
+
+  .lang-switch
+    display: flex
+    gap: 16px
+    align-items: center
+
+    .lang
+      color: $button
+      text-decoration: none
+      font-weight: 600
+      font-size: 16px
+      width: 100px
+      padding: 10px
+      border-radius: 6px
+      transition: background-color 0.3s
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+      text-align: center
+
+      &:hover
+        background-color: lighten($button, 40%)
+        color: darken($button, 15%)
+
+    .lang-flag
+      width: 22px
+      height: 16px
+      object-fit: contain
+      border-radius: 2px
+
+  .mobile-menu
+    display: none
+    position: absolute
+    top: 70px
+    right: 20px
+    background: white
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
+    padding: 20px
+    border-radius: 8px
+    flex-direction: column
+    gap: 16px
+    z-index: 100
+    width: 200px
+
+    .mobile-nav-item
+      color: $button
+      text-decoration: none
+      font-weight: 600
+      font-size: 16px
+      padding: 10px
+      border-radius: 6px
+      transition: background-color 0.3s
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+
+      &:hover
+        background-color: lighten($button, 40%)
+        color: darken($button, 15%)
+
+      &.active
+        font-weight: bold
+        text-decoration: underline
+
+    .mobile-lang-switch
+      display: flex
+      flex-direction: column
+      gap: 12px
+      margin-top: 10px
+      align-items: center
+
+      .mobile-lang
+        color: $button
+        text-decoration: none
+        font-weight: 600
+        font-size: 16px
+        width: 90%
+        padding: 10px
+        border-radius: 6px
+        transition: background-color 0.3s
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+
+        &:hover
+          background-color: lighten($button, 40%)
+          color: darken($button, 15%)
+
+    .lang-flag
+      width: 22px
+      height: 16px
+      object-fit: contain
+      border-radius: 2px
+
+  @include responsive(tablet)
+    .nav-links
+      padding-left: 10px
+
+    .logo-container
+      display: flex
+      align-items: baseline
+      gap: 10px
+
+      .logo
+        height: 40px
+        width: auto
+
+  @include responsive(mobile)
+    .hamburger
+      display: block
+
+    .nav-links, .lang-switch
+      display: none
+
+    #mobile-menu.show
+      display: grid

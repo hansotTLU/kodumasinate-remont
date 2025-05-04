@@ -37,9 +37,8 @@ body
 
   .services-and-brands
     position: absolute
-    top: 50% // adjust this for vertical placement
-    left: 50%
-    transform: translate(-50%, -50%) // perfectly center the box
+    top: 10% // adjust this for vertical placement
+    // transform: translate(-50%, -50%) // perfectly center the box
     background: rgba(255, 255, 255, 0.6) // optional: semi-transparent white background
     padding: 20px
     border-radius: 8px
@@ -48,9 +47,9 @@ body
     width: 100%
 
     .services-listing
-      position: absolute
-      top: 15%
-      left: 5%
+      // position: absolute
+      // top: 15%
+      // left: 5%
     
     .brand-logos
       padding-left: 30%
@@ -89,16 +88,27 @@ body
       margin-bottom: 20px
 
     .services-content-wrapper
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      align-items: flex-start
-      gap: 40px
+      // display: flex
+      // flex-wrap: wrap
+      // justify-content: center
+      // align-items: flex-start
+      // gap: 40px
       width: 100%
 
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      grid-template-areas: "list one two three" "list four five six" "list seven eight -"
+      gap: 50px
+      justify-items: center
+      align-items: center
+
+      
+
       .services-listing // masinad
-        flex: 1
-        min-width: 280px
+        // flex: 1
+        // min-width: 280px
+        grid-area: list
 
         ul
           list-style-position: inside
@@ -121,21 +131,45 @@ body
             margin-bottom: 5px
 
 
-      .brand-logos //kahjuks ei ole ükski neist firmadest minu oma. kui oleks siis ma ilmselt ei kirjutaks seda koodi siin prg
-        flex: 3
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        gap: 50px
-        justify-items: center
-        align-items: center//sen nagu mart pool oleks iseendale penalti loonud
+      // .brand-logos //kahjuks ei ole ükski neist firmadest minu oma. kui oleks siis ma ilmselt ei kirjutaks seda koodi siin prg
+      //   flex: 3
+      //   display: grid
+      //   grid-template-columns: repeat(3, 1fr)
+      //   gap: 50px
+      //   justify-items: center
+      //   align-items: center//sen nagu mart pool oleks iseendale penalti loonud
 
-        img
-          width: 150px //eesti keeles imageeeee. oke pilt noh
-          height: auto
-          transition: transform 0.3s ease//transformerid sõitsid kuule selle valemiga
+      img
+        width: 150px //eesti keeles imageeeee. oke pilt noh
+        height: auto
+        transition: transform 0.3s ease//transformerid sõitsid kuule selle valemiga
 
-          &:hover
-            transform: scale(1.1)
+        &:hover
+          transform: scale(1.1)
+
+      .Electrolux
+        grid-area: one
+
+      .Bosch
+        grid-area: two
+
+      .Smeg
+        grid-area: three
+
+      .AEG
+        grid-area: four
+
+      .Falmec
+        grid-area: five
+
+      .Zanussi
+        grid-area: six
+      
+      .Neff
+        grid-area: seven
+      
+      .Siemens
+        grid-area: eight
 
         @media (max-width: 768px) // telo noh
           grid-template-columns: repeat(2, 1fr) // 2 logo kõrvuti

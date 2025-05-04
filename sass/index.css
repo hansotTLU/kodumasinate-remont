@@ -271,20 +271,13 @@ body .hero-img {
 }
 body .services-and-brands {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 10%;
   background: rgba(255, 255, 255, 0.6);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   max-width: 90%;
   width: 100%;
-}
-body .services-and-brands .services-listing {
-  position: absolute;
-  top: 15%;
-  left: 5%;
 }
 body .services-and-brands .brand-logos {
   padding-left: 30%;
@@ -322,16 +315,17 @@ body .services-and-brands h2 {
   margin-bottom: 20px;
 }
 body .services-and-brands .services-content-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "list one two three" "list four five six" "list seven eight -";
+  gap: 50px;
+  justify-items: center;
+  align-items: center;
 }
 body .services-and-brands .services-content-wrapper .services-listing {
-  flex: 1;
-  min-width: 280px;
+  grid-area: list;
 }
 body .services-and-brands .services-content-wrapper .services-listing ul {
   list-style-position: inside;
@@ -351,24 +345,40 @@ body .services-and-brands .services-content-wrapper .services-listing ul .backgr
 body .services-and-brands .services-content-wrapper .services-listing ul li {
   margin-bottom: 5px;
 }
-body .services-and-brands .services-content-wrapper .brand-logos {
-  flex: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  justify-items: center;
-  align-items: center;
-}
-body .services-and-brands .services-content-wrapper .brand-logos img {
+body .services-and-brands .services-content-wrapper img {
   width: 150px;
   height: auto;
   transition: transform 0.3s ease;
 }
-body .services-and-brands .services-content-wrapper .brand-logos img:hover {
+body .services-and-brands .services-content-wrapper img:hover {
   transform: scale(1.1);
 }
+body .services-and-brands .services-content-wrapper .Electrolux {
+  grid-area: one;
+}
+body .services-and-brands .services-content-wrapper .Bosch {
+  grid-area: two;
+}
+body .services-and-brands .services-content-wrapper .Smeg {
+  grid-area: three;
+}
+body .services-and-brands .services-content-wrapper .AEG {
+  grid-area: four;
+}
+body .services-and-brands .services-content-wrapper .Falmec {
+  grid-area: five;
+}
+body .services-and-brands .services-content-wrapper .Zanussi {
+  grid-area: six;
+}
+body .services-and-brands .services-content-wrapper .Neff {
+  grid-area: seven;
+}
+body .services-and-brands .services-content-wrapper .Siemens {
+  grid-area: eight;
+}
 @media (max-width: 768px) {
-  body .services-and-brands .services-content-wrapper .brand-logos {
+  body .services-and-brands .services-content-wrapper .Siemens {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }

@@ -15,7 +15,7 @@ const languages = {
     submit: "Submit",
     contactHeader: "Contact",
     contactDescription:
-      "When calling, describe the issue as precisely as possible. We may find a solution immediately.",
+      "When calling, describe the issue as precisely as possible",
     serviceArea: "Service Area",
     area: "Tallinn and Harjumaa",
     workingHours: "Working Hours",
@@ -25,7 +25,7 @@ const languages = {
     addressDetail: "Mustamäe tee 24",
     contactTitle: "Contact",
     margusTitle: "Margus Palm - Service Technician",
-    kenTitle: "Ken Rasmus Kuning - Spare Parts Specialist",
+    kenTitle: "Ken Rasmus Kuning - Spare Parts Specialist / Additional Services",
     locationHeader: "Location",
     map: "Map here",
     company: "Marcserv Kodumasin OÜ",
@@ -41,7 +41,7 @@ const languages = {
     // index.html
     title: "Home Appliance Repair and Maintenance",
     description1:
-      "Our main activity is the repair and maintenance of small household appliances. We also offer assistance through specialists focused on other appliances.",
+      "Our main activity is the repair of small household appliances. We also offer assistance through specialists focused on other appliances.",
     description2:
       "Thanks to our long experience in appliance repair, we’re familiar with all kinds of problems and know how to solve them so you don't have to search on your own.",
     description3:
@@ -49,18 +49,19 @@ const languages = {
     description4:
       "Most work is done at the client's home. For more complex or time-consuming repairs, we take the device to our workshop.",
     description5:
-      "For simpler repair work, consider a €60 visit fee. Additional charges may apply for new parts and/or extended labor at €25/hour (VAT included).",
+      "For simpler repair work, a call-out fee of €60 applies. If the work takes more than 30 minutes, an additional charge of €25 per hour applies (VAT included). The cost of replacement parts may also be added if needed.",
     servicesAndBrands: "We service the following devices and brands:",
-    airpurifier: "Air purifiers",
+    rangehoods: "Range hoods",
     stoves: "Stoves",
     stovetops: "Cooktops",
     ovens: "Ovens",
     microwaveOvens: "Microwave ovens",
     coffeeMachines: "Coffee machines",
     vacuums: "Vacuum cleaners",
+
     specialist: "Spare parts specialist/",
     otherServices: "Other services",
-    techician: "Service Technician",
+    techician: "Service technician",
   },
   et: {
     home: "Avaleht",
@@ -78,7 +79,7 @@ const languages = {
     submit: "Saada",
     contactHeader: "Kontakt",
     contactDescription:
-      "Helistades kirjelda probleemi võimalikult täpselt. Võibolla leiame lahenduse kohe.",
+      "Helistades kirjelda probleemi võimalikult täpselt",
     serviceArea: "Teeninduspiirkond",
     area: "Tallinn ja Harjumaa",
     workingHours: "Tööajad",
@@ -88,7 +89,7 @@ const languages = {
     addressDetail: "Mustamäe tee 24",
     contactTitle: "Kontakt",
     margusTitle: "Margus Palm - Hooldustehnik",
-    kenTitle: "Ken Rasmus Kuning - Varuosade spetsialist/",
+    kenTitle: "Ken Rasmus Kuning - Varuosade spetsialist / muud teenused",
     locationHeader: "Asukoht",
     map: "Kaart siin",
     company: "Marcserv Kodumasin OÜ",
@@ -104,7 +105,7 @@ const languages = {
     // index.html
     title: "Kodumasinate remont ja hooldus",
     description1:
-      "Meie peamiseks tegevusalaks on väikeste kodumasinate remont ja hooldus. Pakume ka abiks teistele kodumasinatele spetsialiseerunud remondi- ja hooldusspetsialiste.",
+      "Meie peamiseks tegevusalaks on väikeste kodumasinate remont. Pakume ka abiks teistele kodumasinatele spetsialiseerunud remondi- ja hooldusspetsialiste.",
     description2:
       "Tänu pikaajalisele kogemusele kodumasinate remondi alal oleme kursis kõikvõimalike probleemidega ning teame kuidas leida lahendus, et sina ei peaks pead murdma ja lahendust omal käel otsima.",
     description3:
@@ -112,9 +113,9 @@ const languages = {
     description4:
       "Enamasti toimub hooldus ja remont kliendi kodus. Keerulisemate ja pikemat lahendust nõudvate tööde puhul toimetame seadme töökotta.",
     description5:
-      "Lihtsama remonditöö puhul tuleks arvestada 60 eurose visiiditasuga kuhu võib lisanduda uue varuosa hind ja/või pikema remonditöö tunnitasu 25 eurot (hind sisaldab käibemaksu).",
+      "Lihtsama remonditöö puhul kehtib 60 € visiiditasu. Kui töö kestab üle 30 minuti, lisandub tasu 25 € tunnis (hind sisaldab käibemaksu). Vajadusel lisandub ka varuosa maksumus.",
     servicesAndBrands: "Teenindame järgmisi seadmeid ja brände:",
-    airpurifier: "Õhupuhastid",
+    rangehoods: "Õhupuhastid",
     stoves: "Pliidid",
     stovetops: "Pliidiplaadid",
     ovens: "Ahjud",

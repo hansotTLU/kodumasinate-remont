@@ -62,6 +62,7 @@ const languages = {
     specialist: "Spare parts specialist/",
     otherServices: "Other services",
     techician: "Service technician",
+    Meeskond: "Team",
   },
   et: {
     home: "Avaleht",
@@ -122,9 +123,10 @@ const languages = {
     microwaveOvens: "Mikrolaineahjud",
     coffeeMachines: "Kohvimasinad",
     vacuums: "Tolmuimejad",
-    specialist: "Varuosade spetsialist",
+    specialist: "Varuosade spetsialist/",
     otherServices: "Muud teenused",
     techician: "Hooldustehnik",
+    Meeskond: "Meeskond",
   },
 };
 

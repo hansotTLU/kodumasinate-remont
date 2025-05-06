@@ -233,12 +233,39 @@ body
         margin-top: 12px
         margin-bottom: -8px
 
+      .profile-img-container
+        position: relative
+        width: 120px
+        height: 120px
+        margin: 0 auto 15px
+        right: 0px
+
       img
         width: 120px
         height: 120px
         border-radius: 50% // teeme profiilipildid ümmargused
         object-fit: cover
         margin-bottom: 15px
+
+      .flag-overlay
+        position: absolute
+        bottom: 50px
+        right: -55px
+        width: 35px // 20% 120px-st = 24px
+        height: 35px
+        border-radius: 50%
+        border: 1px solid $border
+        background-color: white
+
+      .flag-overlay-second
+        position: absolute
+        bottom: -5px
+        right: -55px
+        width: 35px // 20% 120px-st = 24px
+        height: 35px
+        border-radius: 50%
+        border: 1px solid $border
+        background-color: white
 
       h4
         margin: 10px 0 5px 0

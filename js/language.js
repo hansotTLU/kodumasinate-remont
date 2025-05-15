@@ -12,10 +12,10 @@ const languages = {
     model: "Model",
     description: "Issue Description",
     pnc: "PNC or E-number (located on the data label)",
+    pncImage: "Upload a picture of the data label (optional)", 
     submit: "Submit",
     contactHeader: "Contact info",
-    contactDescription:
-      "When calling, describe the issue as precisely as possible",
+    contactDescription: "When calling, describe the issue as precisely as possible",
     serviceArea: "Service Area",
     area: "Tallinn and Harjumaa",
     workingHours: "Working Hours",
@@ -50,7 +50,7 @@ const languages = {
       "Most work is done at the client's home. For more complex or time-consuming repairs, we take the device to our workshop.",
     description5:
       "For simpler repair work, a call-out fee of €60 applies. If the work takes more than 30 minutes, an additional charge of €25 per hour applies (VAT included). The cost of replacement parts may also be added if needed.",
-    servicesAndBrands: "We service the following devices and brands:",
+    servicesAndBrands: "Devices and Brands We Service:",
     rangehoods: "Range hoods",
     stoves: "Stoves",
     stovetops: "Cooktops",
@@ -77,6 +77,7 @@ const languages = {
     model: "Mudel",
     description: "Veakirjeldus",
     pnc: "PNC või E-number (asub andmekleebisel)",
+    pncImage: "Laadi üles pilt andmekleebisest (soovi korral)", 
     submit: "Saada",
     contactHeader: "Kontakt",
     contactDescription:
@@ -142,40 +143,59 @@ function changeLanguage(lang) {
   });
 }
 
-// Event listener
+// Keele seadistamine ja mobiilmenüü sulgemine (vajadusel)
+function setLanguage(lang, isMobile = false) {
+  localStorage.setItem("language", lang);
+  window.history.pushState({}, "", "?lang=" + lang);
+  changeLanguage(lang);
+
+  // Kui keele valik tehti mobiilimenüüst, sulgeme selle
+  if (isMobile) {
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburger = document.getElementById("hamburger");
+
+    if (mobileMenu && mobileMenu.classList.contains("show")) {
+  mobileMenu.classList.remove("show");
+  }
+
+    if (hamburger && hamburger.classList.contains("open")) {
+      hamburger.classList.remove("open");
+    }
+  }
+}
+
+// Desktop keelevalikud
 document.getElementById("english-lang").addEventListener("click", function (e) {
   e.preventDefault();
-  window.history.pushState({}, "", "?lang=en");
-  changeLanguage("en");
+  setLanguage("en");
 });
 
-document
-  .getElementById("english-lang-mobile")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    window.history.pushState({}, "", "?lang=en");
-    changeLanguage("en");
-  });
+document.getElementById("estonian-lang").addEventListener("click", function (e) {
+  e.preventDefault();
+  setLanguage("et");
+});
 
-document
-  .getElementById("estonian-lang")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    window.history.pushState({}, "", "?lang=et");
-    changeLanguage("et");
-  });
+// Mobiil keelevalikud – sulgevad menüü pärast valikut
+document.getElementById("english-lang-mobile").addEventListener("click", function (e) {
+  e.preventDefault();
+  setLanguage("en", true); // true = mobile
+});
 
-document
-  .getElementById("estonian-lang-mobile")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    window.history.pushState({}, "", "?lang=et");
-    changeLanguage("et");
-  });
+document.getElementById("estonian-lang-mobile").addEventListener("click", function (e) {
+  e.preventDefault();
+  setLanguage("et", true); // true = mobile
+});
 
-// Check URL for language parameter on page load
+// Keele määramine lehe laadimisel
 window.addEventListener("load", function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const lang = urlParams.get("lang") || "et"; // Default on on Eesti keel
-  changeLanguage(lang);
+  const langFromUrl = urlParams.get("lang");
+  const langFromStorage = localStorage.getItem("language") || "et";
+  const langToUse = langFromUrl || langFromStorage;
+
+  if (!langFromUrl) {
+    window.history.replaceState({}, "", "?lang=" + langToUse);
+  }
+
+  changeLanguage(langToUse);
 });

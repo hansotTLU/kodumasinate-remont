@@ -12,7 +12,7 @@ const languages = {
     model: "Model",
     description: "Issue Description",
     pnc: "PNC or E-number (located on the data label)",
-    pncImage: "Upload a picture of the data label (optional)", 
+    pncImage: "Upload a picture of the data label (if possible)", 
     submit: "Submit",
     contactHeader: "Contact info",
     contactDescription: "When calling, describe the issue as precisely as possible",
@@ -77,7 +77,7 @@ const languages = {
     model: "Mudel",
     description: "Veakirjeldus",
     pnc: "PNC või E-number (asub andmekleebisel)",
-    pncImage: "Laadi üles pilt andmekleebisest (soovi korral)", 
+    pncImage: "Laadi üles pilt andmekleebisest (võimaluse korral)", 
     submit: "Saada",
     contactHeader: "Kontakt",
     contactDescription:

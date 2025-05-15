@@ -22,9 +22,14 @@ body
   margin: 0 auto
   padding: 30px
 
+  @include responsive(mobile)
+    gap: 20px
+    padding: 15px
+
   // Vahetamine arvuti ja telefoni (+tableti) vahel
   @include responsive(mobile)
             grid-template-columns: 1fr
+            
   @include responsive(tablet)
             gap: 20px
 
@@ -35,6 +40,9 @@ body
   border: 1px solid $border
   border-radius: 12px
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+
+  @include responsive(mobile)
+    padding: 10px
 
   // Pealkiri
   h1
@@ -71,6 +79,9 @@ body
       border: none
       border-radius: 4px
       cursor: pointer
+
+      @include responsive(mobile)
+        padding: 13px 20px
 
       &:hover
         background-color: $button-hover

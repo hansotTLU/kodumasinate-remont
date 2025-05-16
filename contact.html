@@ -90,43 +90,69 @@
       <div class="contact-container">
         <!-- Kontakti vorm -->
         <section class="contact-form" aria-label="Contact form">
-          <h1 data-lang="contactFormTitle">Võta ühendust</h1>
-          <form action="#" aria-label="Contact form">
-            <label for="name" data-lang="name">Nimi</label>
-            <input type="text" id="name" name="name" required />
+  <h1 data-lang="contactFormTitle">Võta ühendust</h1>
 
-            <label for="email" data-lang="email">Email</label>
-            <input type="email" id="email" name="email" required />
+  <form id="contactForm" action="send-email.php" method="POST" enctype="multipart/form-data">
+    <label for="name" data-lang="name">Nimi</label>
+    <input type="text" id="name" name="name" required />
 
-            <label for="address" data-lang="address">Aadress</label>
-            <input type="text" id="address" name="address" required />
+    <label for="email" data-lang="email">Email</label>
+    <input type="email" id="email" name="email" required />
 
-            <label for="phone" data-lang="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone" required />
+    <label for="address" data-lang="address">Aadress</label>
+    <input type="text" id="address" name="address" required />
 
-            <label for="product-type" data-lang="productType">Toote tüüp</label>
-            <input type="text" id="product-type" name="product-type" required />
+    <label for="phone" data-lang="phone">Telefon</label>
+    <input type="tel" id="phone" name="phone" required />
 
-            <label for="brand" data-lang="brand">Bränd</label>
-            <input type="text" id="brand" name="brand" required />
+    <label for="product-type" data-lang="productType">Toote tüüp</label>
+    <input type="text" id="product-type" name="product-type" required />
 
-            <label for="model" data-lang="model">Mudel</label>
-            <input type="text" id="model" name="model" />
+    <label for="brand" data-lang="brand">Bränd</label>
+    <input type="text" id="brand" name="brand" required />
 
-            <label for="pnc" data-lang="pnc">PNC või E-number (asub andmekleebisel)</label>
-            <input type="text" id="pnc" name="pnc" placeholder="123456789 või E123456" />
+    <label for="model" data-lang="model">Mudel</label>
+    <input type="text" id="model" name="model" />
 
-            <label for="pncImage" data-lang="pncImage">Laadi üles pilt andmekleebisest (soovi korral)</label>
-            <input type="file" id="pncImage" name="pncImage" accept="image/*" />
+    <label for="pnc" data-lang="pnc">PNC või E-number (asub andmekleebisel)</label>
+    <input type="text" id="pnc" name="pnc" />
 
+    <label for="pncImage" data-lang="pncImage">Laadi üles pilt andmekleebisest (soovi korral)</label>
+    <input type="file" id="pncImage" name="pncImage" accept="image/*" />
 
-            <label for="description" data-lang="description"
-              >Veakirjeldus</label>
-            <textarea id="description" name="description" required></textarea>
+    <label for="description" data-lang="description">Veakirjeldus</label>
+    <textarea id="description" name="description" required></textarea>
 
-            <button type="submit" data-lang="submit">Saada</button>
-          </form>
-        </section>
+    <button type="submit" data-lang="submit">Saada</button>
+    <div id="form-response" style="margin-top: 1em;"></div>
+  </form>
+</section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Ära lae lehte uuesti
+
+    const form = e.target;
+    const responseDiv = document.getElementById('form-response');
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.text();
+      responseDiv.textContent = result;
+      responseDiv.style.color = result.includes("saadetud") ? 'green' : 'red';
+      form.reset();
+    } catch (error) {
+      responseDiv.textContent = 'Tekkis viga. Palun proovi uuesti.';
+      responseDiv.style.color = 'red';
+    }
+  });
+</script>
+
 
         <!-- Kontakti info -->
         <section class="contact-info" aria-label="Contact info">
@@ -162,7 +188,7 @@
             
             <br /><br />
             <p data-lang="kenTitle">
-              Ken Rasmus Kuning - Varuosade spetsialist / muud teenused</p>
+              Ken Rasmus Kuning - Varuosade spetsialist</p>
               <img src="assets/img/estonian.png" alt="Eesti" class="flag-small" /> 
               <img src="assets/img/english.png" alt="English" class="flag-small" />
               <a href="tel:+37251934129">+372 51934129</a>

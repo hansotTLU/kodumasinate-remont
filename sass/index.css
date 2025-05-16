@@ -319,7 +319,7 @@ body .services-and-brands {
 }
 @media (max-width: 720px) {
   body .services-and-brands {
-    top: 15%;
+    top: 16%;
     border: 1px solid #3464e2;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);

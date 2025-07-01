@@ -15,8 +15,15 @@
 
   .header-nav
     display: flex
-    justify-content: space-between
+    gap: 10px
     align-items: center
+    justify-content: flex-end
+
+    .social
+      order: 2
+
+    .hamburger
+      order: 3
 
   .logo-container
     display: flex
@@ -47,12 +54,13 @@
       text-align: center
       font-weight: 600
       font-size: 16px
-      width: 70px
+      width: 115px
       height: 25px
       padding: 6px 10px
       border-radius: 6px
       transition: all 0.3s ease
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+      background-color: lighten($button, 60%)
+      border-bottom: 1px solid rgba(30, 82, 255, 0.502)
 
       &:hover
         background-color: $button-hover
@@ -92,9 +100,10 @@
       font-weight: 600
       font-size: 16px
       padding: 10px
-      border-radius: 6px
+      border-radius: 12px
+      background-color: lighten($button, 60%)
       transition: background-color 0.3s
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+      border: 1px solid rgba(30, 82, 255, 0.502)
       text-align: center
 
       &:hover
@@ -119,7 +128,7 @@
     flex-direction: column
     gap: 16px
     z-index: 100
-    width: 200px
+    width: 80%
 
     .mobile-nav-item
       color: $button
@@ -142,8 +151,8 @@
       display: flex
       flex-direction: row
       gap: 12px
-      margin-top: 10px
       align-items: center
+      justify-content: center
 
       .mobile-lang
         color: $button
@@ -160,8 +169,8 @@
           color: darken($button, 15%)
 
     .lang-flag
-      width: 22px
-      height: 16px
+      width: 28px
+      height: 24px
       object-fit: contain
       border-radius: 2px
 
@@ -179,6 +188,12 @@
         width: auto
 
   @include responsive(mobile)
+    .social
+      order: 1
+
+    .hamburger
+      order: 2
+    
     .hamburger
       display: block
 

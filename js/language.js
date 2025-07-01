@@ -65,7 +65,7 @@ const languages = {
   },
   et: {
     home: "Avaleht",
-    contact: "Kontakt",
+    contact: "Võta ühendust",
     contactFormTitle: "Võta ühendust",
     name: "Nimi",
     email: "Email",

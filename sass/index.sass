@@ -42,23 +42,25 @@ body
   .repair-info
     border: 1px solid $border // see on tore asi
     border-radius: 12px// see raadius on isegi väiksem kui mu vanaema oma
-    padding: 5px
+    padding: 10px
     width: 80%  //juhuks kui spetsalistile ei meeldi siis sellega saab kasti ümber
     text-align: center
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+    max-width: 1200px
 
     @include responsive(mobile)
       margin-top: 0px// et telos ei sõidaks asjad kokku
+      width: 88%
 
   .services-and-brands
     position: absolute
-    top: 15% // adjust this for vertical placement
+    top: 140px// adjust this for vertical placement
     // transform: translate(-50%, -50%) // perfectly center the box
     background: rgba(255, 255, 255, 0.7) // optional: semi-transparent white background
-    padding: 20px
+    padding: 10px
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
-    max-width: 90%
-    width: 65%
+    max-width: 1200px
+    width: 80%
     display: flex
     flex-direction: column
     align-items: center
@@ -66,13 +68,13 @@ body
     border: 1px solid $border
       
     @include responsive(mobile)
-          top: 16%
+          top: 130px
           border: 1px solid $border
           background: rgba(255, 255, 255, 0.7)
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
           border-radius: 12px
           gap: 0px
-          width: 70%
+          width: 88%
 
     @include responsive(tablet)
       position: absolute

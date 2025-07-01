@@ -68,6 +68,16 @@
 #site-header .nav-links .nav-item.active {
   font-weight: bold;
 }
+#site-header .social .fa {
+  padding: 12px;
+  font-size: 24px;
+  width: 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background: #1f6cfa;
+  color: white;
+}
 #site-header .lang-switch {
   display: flex;
   gap: 16px;
@@ -78,7 +88,6 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  width: 100px;
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
@@ -129,7 +138,7 @@
 }
 #site-header .mobile-menu .mobile-lang-switch {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
   margin-top: 10px;
   align-items: center;
@@ -139,7 +148,6 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  width: 90%;
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;

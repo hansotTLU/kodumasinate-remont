@@ -127,6 +127,70 @@ const languages = {
     techician: "Hooldustehnik",
     Meeskond: "Meeskond",
   },
+  ru: {
+  home: "Главная",
+  contact: "Контакт",
+  contactFormTitle: "Связаться с нами",
+  name: "Имя",
+  email: "Эл. почта",
+  address: "Адрес",
+  phone: "Телефон",
+  productType: "Тип устройства (духовка, плита и т. д.)",
+  brand: "Бренд",
+  model: "Модель",
+  description: "Описание проблемы",
+  pnc: "PNC или E-номер (указан на информационной наклейке)",
+  pncImage: "Загрузите фото информационной наклейки (если возможно)",
+  submit: "Отправить",
+  contactHeader: "Контактная информация",
+  contactDescription: "При звонке опишите проблему как можно точнее",
+  serviceArea: "Зона обслуживания",
+  area: "Таллинн и Харьюмаа",
+  workingHours: "Рабочее время",
+  hours: "Пн-Пт 9:00–17:00",
+  hoursAdditional: "По договоренности — в другое время",
+  addressHeader: "Адрес",
+  addressDetail: "Mustamäe tee 24",
+  contactTitle: "Контакт",
+  margusTitle: "Маргус Пальм — сервисный техник",
+  kenTitle: "Кен Расмус Кунинг — специалист по запчастям",
+  locationHeader: "Местоположение",
+  map: "Карта здесь",
+  company: "Marcserv Kodumasin OÜ",
+  companyCode: "Регистрационный код: 16356420",
+  taxNumber: "Номер НДС: EE100983276",
+  whenWhere: "Где мы находимся",
+  workingHoursFooter: "Пн-Пт 9:00–17:00",
+  addressFooter: "Mustamäe tee 24",
+  contactFooter: "Контакт",
+  emailFooter: "marcserv.hooldus@gmail.com",
+  phoneFooter: "+372 5193 4129",
+
+  // index.html
+  title: "Ремонт и обслуживание бытовой техники",
+  description1:
+    "Наша основная деятельность — ремонт мелкой бытовой техники. Также мы предлагаем помощь специалистов, работающих с другой техникой.",
+  description2:
+    "Благодаря нашему многолетнему опыту в ремонте бытовой техники, мы знакомы с любыми проблемами и знаем, как их решить, чтобы вам не пришлось искать решение самостоятельно.",
+  description3:
+    "Работаем в Таллинне и Харьюмаа. Другие регионы — по договоренности.",
+  description4:
+    "Большинство работ выполняется на дому у клиента. Более сложные и длительные ремонты выполняем в нашей мастерской.",
+  description5:
+    "Для простого ремонта действует выездной сбор в размере 60 €. Если работа занимает более 30 минут, дополнительно взимается плата 25 €/час (включая НДС). Также может добавляться стоимость запчастей при необходимости.",
+  servicesAndBrands: "Мы обслуживаем следующие устройства и бренды:",
+  rangehoods: "Вытяжки",
+  stoves: "Плиты",
+  stovetops: "Варочные панели",
+  ovens: "Духовки",
+  microwaveOvens: "Микроволновые печи",
+  coffeeMachines: "Кофемашины",
+  vacuums: "Пылесосы",
+  specialist: "Специалист по запчастям",
+  techician: "Сервисный техник",
+  Meeskond: "Команда",
+}
+
 };
 
 // Keele muutmise funktsioon
@@ -173,16 +237,28 @@ document.getElementById("estonian-lang").addEventListener("click", function (e) 
   setLanguage("et");
 });
 
+document.getElementById("russian-lang").addEventListener("click", function (e) {
+  e.preventDefault();
+  setLanguage("ru");
+});
+
 // Mobiil keelevalikud – sulgevad menüü pärast valikut
 document.getElementById("english-lang-mobile").addEventListener("click", function (e) {
   e.preventDefault();
-  setLanguage("en", true); // true = mobile
+  setLanguage("en", true);
 });
 
 document.getElementById("estonian-lang-mobile").addEventListener("click", function (e) {
   e.preventDefault();
-  setLanguage("et", true); // true = mobile
+  setLanguage("et", true);
 });
+
+document.getElementById("russian-lang-mobile").addEventListener("click", function (e) {
+  e.preventDefault();
+  setLanguage("ru", true);
+});
+
+
 
 // Keele määramine lehe laadimisel
 window.addEventListener("load", function () {

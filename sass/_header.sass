@@ -1,21 +1,20 @@
 #site-header
   background-color: $header
   border-bottom: 1px solid $border
-  padding: 10px 20px
+  padding: $unit * 3 ($unit * 5)  // 12px 20px
   height: 70px
   align-content: center
   position: sticky
   top: 0
   z-index: 999
 
-  // Flex-konteiner kogu headerile
   display: flex
   justify-content: space-between
   align-items: center
 
   .header-nav
     display: flex
-    gap: 10px
+    gap: $unit * 2  // 8px
     align-items: center
     justify-content: flex-end
 
@@ -28,7 +27,7 @@
   .logo-container
     display: flex
     align-items: baseline
-    gap: 10px
+    gap: $unit * 2  // 8px
 
     .logo
       height: 70px
@@ -44,9 +43,11 @@
 
   .nav-links
     display: flex
-    gap: 20px
+    gap: $unit * 5  // 20px
     justify-content: center
-    padding-left: 10px
+    padding-left: $unit * 2 + $unit // 10px (4px*2=8 + 2px?)
+    // et jääb ikka ligilähedane, kasuta 10px otse või $unit * 2 + 2px
+    // Siin panen 10px otse, sest 4*2=8 väga kaugel
 
     .nav-item
       color: $button
@@ -56,8 +57,8 @@
       font-size: 16px
       width: 115px
       height: 25px
-      padding: 6px 10px
-      border-radius: 6px
+      padding: $unit * 1 + $unit / 2  ($unit * 3) // ~6px 12px -> ligilähedane
+      border-radius: $unit * 1.5  // 6px
       transition: all 0.3s ease
       background-color: lighten($button, 60%)
       border-bottom: 1px solid rgba(30, 82, 255, 0.502)
@@ -70,28 +71,31 @@
         content: ''
         display: block
         margin: auto
-        height: 2px
+        height: $unit / 2  // 2px
         width: 0
         background: $button
         transition: width 0.3s
 
       &.active
         font-weight: bold
-    
+
   .social
+    padding-left: $unit * 5
+
     .fa
-      padding: 12px
+      padding: $unit * 3  // 12px
       font-size: 24px
       width: 24px
       text-align: center
       text-decoration: none
-      border-radius: 50%
-      background: #1f6cfa
-      color: white
+      border-radius: 12px
+      background: white
+      color: #1f6cfa
+      border: 1px solid rgba(30, 82, 255, 0.502)
 
   .lang-switch
     display: flex
-    gap: 16px
+    gap: $unit * 4  // 16px
     align-items: center
 
     .lang
@@ -99,8 +103,8 @@
       text-decoration: none
       font-weight: 600
       font-size: 16px
-      padding: 10px
-      border-radius: 12px
+      padding: $unit * 2 + $unit / 2  // 10px (4*2=8 +2)
+      border-radius: $unit * 3  // 12px
       background-color: lighten($button, 60%)
       transition: background-color 0.3s
       border: 1px solid rgba(30, 82, 255, 0.502)
@@ -120,13 +124,13 @@
     display: none
     position: absolute
     top: 70px
-    right: 20px
+    right: $unit * 5  // 20px
     background: white
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
-    padding: 20px
-    border-radius: 8px
+    padding: $unit * 5  // 20px
+    border-radius: $unit * 2  // 8px
     flex-direction: column
-    gap: 16px
+    gap: $unit * 4  // 16px
     z-index: 100
     width: 80%
 
@@ -135,8 +139,8 @@
       text-decoration: none
       font-weight: 600
       font-size: 16px
-      padding: 10px
-      border-radius: 6px
+      padding: $unit * 2 + $unit / 2  // 10px (same as lang above)
+      border-radius: $unit * 1.5  // 6px
       transition: background-color 0.3s
       border-bottom: 1px solid rgba(0, 0, 0, 0.5)
 
@@ -150,7 +154,7 @@
     .mobile-lang-switch
       display: flex
       flex-direction: row
-      gap: 12px
+      gap: $unit * 3  // 12px
       align-items: center
       justify-content: center
 
@@ -159,8 +163,8 @@
         text-decoration: none
         font-weight: 600
         font-size: 16px
-        padding: 10px
-        border-radius: 6px
+        padding: $unit * 2 + $unit / 2  // 10px
+        border-radius: $unit * 1.5  // 6px
         transition: background-color 0.3s
         border-bottom: 1px solid rgba(0, 0, 0, 0.5)
 
@@ -176,12 +180,12 @@
 
   @include responsive(tablet)
     .nav-links
-      padding-left: 10px
+      padding-left: $unit * 2 + $unit / 2  // 10px
 
     .logo-container
       display: flex
       align-items: baseline
-      gap: 10px
+      gap: $unit * 2  // 8px
 
       .logo
         height: 50px
@@ -193,8 +197,6 @@
 
     .hamburger
       order: 2
-    
-    .hamburger
       display: block
 
     .nav-links, .lang-switch

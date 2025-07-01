@@ -6,302 +6,283 @@
 
 body
   font-family: Arial, sans-serif
-  display: flex // teeme kogu keha flex-iks
-  flex-direction: column // et kõik asjad oleksid üksteise all, mitte kõrval
+  display: flex
+  flex-direction: column
   min-height: 100vh
-  margin: 0 // nullime veebis vaikimisi ääred
+  margin: 0
 
   main
     flex: 1
     display: flex
     flex-direction: column
     align-items: center
-    background-color: $content // taustavärv tuleb teisest failist. lahe ju
+    background-color: $content
 
   .hero
     width: 100%
-    height: 400px // pilt mingi kindla kõrgusega
-    overflow: hidden // kui midagi jääb välja, peidame ära
+    height: 400px
+    overflow: hidden
     position: relative
 
   .hero-img
     width: 100%
     height: 475px
-    object-fit: cover // pilt katab ala täpselt, vajadusel lõikab ära
+    object-fit: cover
     display: block
 
     @include responsive(mobile)
       height: 650px
 
-    // pildi äärtes hajutatud mask – et üleminek oleks sujuvam
     mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)
 
-      
-
   .repair-info
-    border: 1px solid $border // see on tore asi
-    border-radius: 12px// see raadius on isegi väiksem kui mu vanaema oma
-    padding: 10px
-    width: 80%  //juhuks kui spetsalistile ei meeldi siis sellega saab kasti ümber
+    border: 1px solid $border
+    border-radius: 12px
+    padding: $unit * 3 // 12px asemel
+    width: 80%
     text-align: center
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
     max-width: 1200px
 
     @include responsive(mobile)
-      margin-top: 0px// et telos ei sõidaks asjad kokku
+      margin-top: 0
       width: 88%
 
   .services-and-brands
     position: absolute
-    top: 140px// adjust this for vertical placement
-    // transform: translate(-50%, -50%) // perfectly center the box
-    background: rgba(255, 255, 255, 0.7) // optional: semi-transparent white background
-    padding: 10px
+    top: 140px
+    background: rgba(255, 255, 255, 0.7)
+    padding: $unit * 2 + $unit / 2 // ~10px: $unit * 2 = 8px, + 0.5*$unit=2px = 10px, aga kuna ainult täisarv, panen $unit * 3 (12px) on lähedal
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
     max-width: 1200px
     width: 80%
     display: flex
     flex-direction: column
     align-items: center
-    gap: 15px
+    gap: $unit * 4 // 16px asemel 15, lähedal
     border: 1px solid $border
-      
+
     @include responsive(mobile)
-          top: 130px
-          border: 1px solid $border
-          background: rgba(255, 255, 255, 0.7)
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
-          border-radius: 12px
-          gap: 0px
-          width: 88%
+      top: 130px
+      border: 1px solid $border
+      background: rgba(255, 255, 255, 0.7)
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+      border-radius: 12px
+      gap: 0
+      width: 88%
 
     @include responsive(tablet)
       position: absolute
-      top: 15% // kui kaugel ülevalt see kast on
-      background: rgba(255, 255, 255, 0.7) // läbipaistva valgega taust
-      padding: 20px
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) // väike varjund, et kast tõuseks taustast esile
+      top: 15%
+      background: rgba(255, 255, 255, 0.7)
+      padding: $unit * 5 // 20px asemel
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
       max-width: 90%
       width: 80%
       display: flex
       flex-direction: column
       align-items: center
-      gap: 0px
+      gap: 0
       border: 1px solid $border
 
-
-    
     .brand-logos
-      padding-left: 30% // logosid lükkame veidi paremale
+      padding-left: $unit * 8 // 32px asemel 30px, lähedal
 
+section
+  width: 100%
+  background-color: $content
+  border-radius: 12px
+  margin-bottom: $unit * 4 // 16px asemel 15px
 
-  section
-    width: 100%
-    background-color: $content
-    border-radius: 12px
-    margin-bottom: 15px
+  p
+    text-align: center
+    color: $text
+    font-size: 16px
 
-    p
-      text-align: center
-      color: $text
-      font-size: 16px
-      //line-height: 1.6     akki kunagi tuleb huvi tagasi panna
+  h2
+    font-size: 28px
+    color: $text
+    text-align: center
+    margin-bottom: $unit * 5 // 20px asemel
 
+  h1
+    font-size: 28px
+    color: #252525
+    text-align: center
+    margin-bottom: $unit * 5
+    border-radius: 10px
+    text-shadow: 0px 0px 10px rgb(255, 255, 255)
 
-    h2
-      font-size: 28px
-      color: $text
-      text-align: center
-      margin-bottom: 20px
-      border-radius: 10px
+    @include responsive(mobile)
+      margin-bottom: 0
+      margin-top: $unit * 3 // 12px asemel 10px, natuke suurem aga lähedal
 
-    h1
-      font-size: 28px
-      color: #252525
-      text-align: center
-      margin-bottom: 20px
-      border-radius: 10px
-      text-shadow: 0px 0px 10px rgb(255, 255, 255)
+  .services-content-wrapper
+    width: 85%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    grid-template-areas: "list one two three" "list four five six" "list seven eight -"
+    gap: $unit // 4px
+    justify-items: center
+    align-items: center
 
-      @include responsive(mobile)
-        margin-bottom: 0px
-        margin-top: 10px
-
-
-
-    .services-content-wrapper
-      width: 85%
+    @include responsive(mobile)
+      justify-content: center
+      gap: $unit * 5 // 20px asemel
+      width: 100%
       display: grid
-      grid-template-columns: 1fr 1fr 1fr 1fr
-      grid-template-rows: 1fr 1fr 1fr
-      grid-template-areas: "list one two three" "list four five six" "list seven eight -"
-      gap: 4%
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: auto auto auto auto
+      grid-template-areas: "list list list" "one two three" "four five six" "seven eight -"
       justify-items: center
       align-items: center
+      object-fit: cover
+      row-gap: $unit * 10 // 40px asemel
 
-      @include responsive(mobile)
-        justify-content: center
-        gap: 20px
-        width: 100%
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        grid-template-rows: auto auto auto auto
-        grid-template-areas: "list list list" "one two three" "four five six" "seven eight -"
-        justify-items: center
-        align-items: center
-        object-fit: cover
-        row-gap: 40px
+    @include responsive(tablet)
+      justify-content: center
+      gap: $unit * 5
+      width: 10%
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: auto auto auto auto
+      grid-template-areas: "list one two" "list three four" "list five six" "list seven eight"
+      row-gap: 0
+      justify-items: center
+      align-items: center
+      object-fit: cover
 
-      @include responsive(tablet)
-        justify-content: center
-        gap: 20px
-        width: 10%
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        grid-template-rows: auto auto auto auto
-        grid-template-areas: "list one two" "list three four" "list five six" "list seven eight"
-        row-gap: 0px
-        justify-items: center
-        align-items: center
-        object-fit: cover
+    .services-listing
+      min-width: 280px
+      grid-area: list
+      border: 1px solid $border
+      background: rgba(255, 255, 255, 0.7)
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+      border-radius: 12px
 
-      .services-listing // masinad
-        min-width: 280px
-        grid-area: list
-
-        //@include responsive(mobile)
-          border: 1px solid $border
-          background: rgba(255, 255, 255, 0.7)
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
-          border-radius: 12px
-
-        ul
-          list-style-position: inside
-          font-size: 22px
-          color: $text
-          font-weight: bold
-          line-height: 1.3 // reavahe
-
-          @include responsive(mobile)
-            margin-bottom: 0px
-            margin-top: 20px
-
-
-          li
-            margin-bottom: 5px
-
-      img //see on pilt
-        max-width: 180px
-        width: 110% 
-        min-width: 80px
-        height: auto
-        transition: transform 0.3s ease //transformerid sõitsid kuule selle valemiga
-
-        @include responsive(tablet)
-          max-width: 180px
-          width: 100%
-          min-width: 120px //norm jauramine oli sellega. ei soovita. aga norm nüüd. sujuv
-
-        &:hover
-          transform: scale(1.1)// teeb suuremaks – suht lahe. Tglt võiks lingid ka siis juurde panan et vajutada saaks aag kelle on 1 öösel. aitab küll vms.
+      ul
+        list-style-position: inside
+        font-size: 22px
+        color: $text
+        font-weight: bold
+        line-height: 1.3
 
         @include responsive(mobile)
-          &:hover
-            transform: none // eemaldab hoveri mobiilivaates
+          margin-bottom: 0
+          margin-top: $unit * 5 // 20px asemel
 
+        li
+          margin-bottom: $unit * 1 // 4px asemel 5px, lähedal
 
-      .Electrolux
-        grid-area: one
+    img
+      max-width: 180px
+      width: 110%
+      min-width: 80px
+      height: auto
+      transition: transform 0.3s ease
 
-      .Bosch
-        grid-area: two
+      @include responsive(tablet)
+        max-width: 180px
+        width: 100%
+        min-width: $unit * 30 // 120px asemel
 
-      .Smeg
-        grid-area: three
+      &:hover
+        transform: scale(1.1)
 
-      .AEG
-        grid-area: four
+      @include responsive(mobile)
+        &:hover
+          transform: none
 
-      .Falmec
-        grid-area: five
+    .Electrolux
+      grid-area: one
 
-      .Zanussi
-        grid-area: six
-      
-      .Neff
-        grid-area: seven
-      
-      .Siemens
-        grid-area: eight
+    .Bosch
+      grid-area: two
 
+    .Smeg
+      grid-area: three
 
-    // Spetsialistid töömehed
-  .specialists
-    margin-top: 30px
-    display: flex
-    flex-wrap: wrap
-    gap: 30px
-    justify-content: center // kirjutan kommentaari sest nii oli juhendis ette antud
+    .AEG
+      grid-area: four
 
-    .specialist-card //nende info koos pildigakaardil
+    .Falmec
+      grid-area: five
+
+    .Zanussi
+      grid-area: six
+
+    .Neff
+      grid-area: seven
+
+    .Siemens
+      grid-area: eight
+
+.specialists
+  margin-top: $unit * 8 // 30px asemel lähedane
+  display: flex
+  flex-wrap: wrap
+  gap: $unit * 7 // 28px asemel 30px lähedane
+  justify-content: center
+
+  .specialist-card
+    background-color: white
+    border: 1px solid $border
+    border-radius: 12px
+    padding: $unit * 5 // 20px asemel
+    width: 250px
+    text-align: center
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+
+    .tight-spacing
+      margin-top: $unit * 3 // 12px asemel
+      margin-bottom: -$unit * 2 // -8px asemel
+
+    .profile-img-container
+      position: relative
+      width: 120px
+      height: 120px
+      margin: 0 auto $unit * 4 // 15px asemel
+      right: 0
+
+    img
+      width: 120px
+      height: 120px
+      border-radius: 50%
+      object-fit: cover
+      margin-bottom: $unit * 4 // 15px asemel
+
+    .flag-overlay
+      position: absolute
+      bottom: 50px
+      right: -$unit * 14 // -56px asemel -55px
+      width: $unit * 8 // 32px
+      height: $unit * 8
+      border-radius: 50%
+      border: 1px solid $border
       background-color: white
-      border: 1px solid $border // see on tore asi
-      border-radius: 12px// see raadius on isegi suht väike
-      padding: 20px
-      width: 250px
-      text-align: center
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
 
-      .tight-spacing
-        margin-top: 12px
-        margin-bottom: -8px
+    .flag-overlay-second
+      position: absolute
+      bottom: -$unit // -4px asemel -5px (lähedal)
+      right: -$unit * 14
+      width: $unit * 8
+      height: $unit * 8
+      border-radius: 50%
+      border: 1px solid $border
+      background-color: white
 
-      .profile-img-container
-        position: relative
-        width: 120px
-        height: 120px
-        margin: 0 auto 15px
-        right: 0px
+    h4
+      margin: $unit * 2.5 0 $unit * 1.25 0 // 10px 0 5px 0
+      font-size: 20px
+      color: $text-dark
 
-      img
-        width: 120px
-        height: 120px
-        border-radius: 50% // teeme profiilipildid ümmargused
-        object-fit: cover
-        margin-bottom: 15px
+      p
+        font-size: 18px
+        color: $text
 
-      .flag-overlay
-        position: absolute
-        bottom: 50px
-        right: -55px
-        width: 32px
-        height: 32px
-        border-radius: 50%
-        border: 1px solid $border
-        background-color: white
-
-      .flag-overlay-second
-        position: absolute
-        bottom: -5px
-        right: -55px
-        width: 32px//20% 120px-st = 24px
-        height: 32px
-        border-radius: 50%
-        border: 1px solid $border
-        background-color: white
-
-      h4
-        margin: 10px 0 5px 0
-        font-size: 20px
-        color: $text-dark
-
-        p
-          font-size: 18px
-          color: $text //Hugo Toom
-
-          .tight-spacing
-            margin-top: 1px
-            margin-bottom: 4px
-            line-height: 1.1
-            
+        .tight-spacing
+          margin-top: $unit / 4 // ~1px
+          margin-bottom: $unit // 4px
+          line-height: 1.1

@@ -1,7 +1,7 @@
 #site-header {
   background-color: #f0f0f0;
   border-bottom: 1px solid #3464e2;
-  padding: 10px 20px;
+  padding: 12px 20px;
   height: 70px;
   align-content: center;
   position: sticky;
@@ -13,7 +13,7 @@
 }
 #site-header .header-nav {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
   justify-content: flex-end;
 }
@@ -26,7 +26,7 @@
 #site-header .logo-container {
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 8px;
 }
 #site-header .logo-container .logo {
   height: 70px;
@@ -44,7 +44,7 @@
   display: flex;
   gap: 20px;
   justify-content: center;
-  padding-left: 10px;
+  padding-left: 12px;
 }
 #site-header .nav-links .nav-item {
   color: #2c3b64;
@@ -54,7 +54,7 @@
   font-size: 16px;
   width: 115px;
   height: 25px;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
   background-color: #d5dced;
@@ -76,15 +76,19 @@
 #site-header .nav-links .nav-item.active {
   font-weight: bold;
 }
+#site-header .social {
+  padding-left: 20px;
+}
 #site-header .social .fa {
   padding: 12px;
   font-size: 24px;
   width: 24px;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
-  background: #1f6cfa;
-  color: white;
+  border-radius: 12px;
+  background: white;
+  color: #1f6cfa;
+  border: 1px solid rgba(30, 82, 255, 0.502);
 }
 #site-header .lang-switch {
   display: flex;
@@ -180,7 +184,7 @@
   #site-header .logo-container {
     display: flex;
     align-items: baseline;
-    gap: 10px;
+    gap: 8px;
   }
   #site-header .logo-container .logo {
     height: 50px;
@@ -193,8 +197,6 @@
   }
   #site-header .hamburger {
     order: 2;
-  }
-  #site-header .hamburger {
     display: block;
   }
   #site-header .nav-links, #site-header .lang-switch {
@@ -214,9 +216,9 @@
 #site-footer .footer-container {
   justify-content: center;
   display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  gap: 190px;
+  gap: 192px;
   max-width: 1200px;
   margin: auto;
   grid-template-areas: "footer-column1 footer-column2 footer-column3";
@@ -227,7 +229,7 @@
 }
 @media (min-width: 721px) and (max-width: 1049px) {
   #site-footer .footer-container {
-    gap: 50px;
+    gap: 48px;
   }
   #site-footer .footer-container .footer-column1, #site-footer .footer-container .footer-column2, #site-footer .footer-container .footer-column3 {
     align-items: center;
@@ -237,37 +239,18 @@
   #site-footer .footer-container {
     grid-template-columns: 1fr;
     grid-template-areas: "footer-column1" "footer-column2" "footer-column3";
-    gap: 50px;
+    gap: 48px;
   }
   #site-footer .footer-container .footer-column1, #site-footer .footer-container .footer-column2, #site-footer .footer-container .footer-column3 {
     align-items: center;
   }
 }
-#site-footer .footer-column1 {
-  grid-area: footer-column1;
+#site-footer .footer-column1, #site-footer .footer-column2, #site-footer .footer-column3 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
-#site-footer .footer-column1 p {
-  margin: 0;
-}
-#site-footer .footer-column2 {
-  grid-area: footer-column2;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#site-footer .footer-column2 p {
-  margin: 0;
-}
-#site-footer .footer-column3 {
-  grid-area: footer-column3;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#site-footer .footer-column3 p {
+#site-footer .footer-column1 p, #site-footer .footer-column2 p, #site-footer .footer-column3 p {
   margin: 0;
 }
 #site-footer .copyright {
@@ -314,7 +297,7 @@ body .hero-img {
 body .repair-info {
   border: 1px solid #3464e2;
   border-radius: 12px;
-  padding: 10px;
+  padding: 12px;
   width: 80%;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -322,7 +305,7 @@ body .repair-info {
 }
 @media (max-width: 720px) {
   body .repair-info {
-    margin-top: 0px;
+    margin-top: 0;
     width: 88%;
   }
 }
@@ -337,7 +320,7 @@ body .services-and-brands {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
   border: 1px solid #3464e2;
 }
 @media (max-width: 720px) {
@@ -347,7 +330,7 @@ body .services-and-brands {
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    gap: 0px;
+    gap: 0;
     width: 88%;
   }
 }
@@ -363,32 +346,32 @@ body .services-and-brands {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 0;
     border: 1px solid #3464e2;
   }
 }
 body .services-and-brands .brand-logos {
-  padding-left: 30%;
+  padding-left: 32px;
 }
-body section {
+
+section {
   width: 100%;
   background-color: #f8f8f8;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
-body section p {
+section p {
   text-align: center;
   color: #333;
   font-size: 16px;
 }
-body section h2 {
+section h2 {
   font-size: 28px;
   color: #333;
   text-align: center;
   margin-bottom: 20px;
-  border-radius: 10px;
 }
-body section h1 {
+section h1 {
   font-size: 28px;
   color: #252525;
   text-align: center;
@@ -397,23 +380,23 @@ body section h1 {
   text-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 @media (max-width: 720px) {
-  body section h1 {
-    margin-bottom: 0px;
-    margin-top: 10px;
+  section h1 {
+    margin-bottom: 0;
+    margin-top: 12px;
   }
 }
-body section .services-content-wrapper {
+section .services-content-wrapper {
   width: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "list one two three" "list four five six" "list seven eight -";
-  gap: 4%;
+  gap: 4px;
   justify-items: center;
   align-items: center;
 }
 @media (max-width: 720px) {
-  body section .services-content-wrapper {
+  section .services-content-wrapper {
     justify-content: center;
     gap: 20px;
     width: 100%;
@@ -429,7 +412,7 @@ body section .services-content-wrapper {
   }
 }
 @media (min-width: 721px) and (max-width: 1049px) {
-  body section .services-content-wrapper {
+  section .services-content-wrapper {
     justify-content: center;
     gap: 20px;
     width: 10%;
@@ -437,18 +420,22 @@ body section .services-content-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "list one two" "list three four" "list five six" "list seven eight";
-    row-gap: 0px;
+    row-gap: 0;
     justify-items: center;
     align-items: center;
     -o-object-fit: cover;
        object-fit: cover;
   }
 }
-body section .services-content-wrapper .services-listing {
+section .services-content-wrapper .services-listing {
   min-width: 280px;
   grid-area: list;
+  border: 1px solid #3464e2;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
-body section .services-content-wrapper .services-listing ul {
+section .services-content-wrapper .services-listing ul {
   list-style-position: inside;
   font-size: 22px;
   color: #333;
@@ -456,15 +443,15 @@ body section .services-content-wrapper .services-listing ul {
   line-height: 1.3;
 }
 @media (max-width: 720px) {
-  body section .services-content-wrapper .services-listing ul {
-    margin-bottom: 0px;
+  section .services-content-wrapper .services-listing ul {
+    margin-bottom: 0;
     margin-top: 20px;
   }
 }
-body section .services-content-wrapper .services-listing ul li {
-  margin-bottom: 5px;
+section .services-content-wrapper .services-listing ul li {
+  margin-bottom: 4px;
 }
-body section .services-content-wrapper img {
+section .services-content-wrapper img {
   max-width: 180px;
   width: 110%;
   min-width: 80px;
@@ -472,52 +459,53 @@ body section .services-content-wrapper img {
   transition: transform 0.3s ease;
 }
 @media (min-width: 721px) and (max-width: 1049px) {
-  body section .services-content-wrapper img {
+  section .services-content-wrapper img {
     max-width: 180px;
     width: 100%;
     min-width: 120px;
   }
 }
-body section .services-content-wrapper img:hover {
+section .services-content-wrapper img:hover {
   transform: scale(1.1);
 }
 @media (max-width: 720px) {
-  body section .services-content-wrapper img:hover {
+  section .services-content-wrapper img:hover {
     transform: none;
   }
 }
-body section .services-content-wrapper .Electrolux {
+section .services-content-wrapper .Electrolux {
   grid-area: one;
 }
-body section .services-content-wrapper .Bosch {
+section .services-content-wrapper .Bosch {
   grid-area: two;
 }
-body section .services-content-wrapper .Smeg {
+section .services-content-wrapper .Smeg {
   grid-area: three;
 }
-body section .services-content-wrapper .AEG {
+section .services-content-wrapper .AEG {
   grid-area: four;
 }
-body section .services-content-wrapper .Falmec {
+section .services-content-wrapper .Falmec {
   grid-area: five;
 }
-body section .services-content-wrapper .Zanussi {
+section .services-content-wrapper .Zanussi {
   grid-area: six;
 }
-body section .services-content-wrapper .Neff {
+section .services-content-wrapper .Neff {
   grid-area: seven;
 }
-body section .services-content-wrapper .Siemens {
+section .services-content-wrapper .Siemens {
   grid-area: eight;
 }
-body .specialists {
-  margin-top: 30px;
+
+.specialists {
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 28px;
   justify-content: center;
 }
-body .specialists .specialist-card {
+.specialists .specialist-card {
   background-color: white;
   border: 1px solid #3464e2;
   border-radius: 12px;
@@ -526,55 +514,55 @@ body .specialists .specialist-card {
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-body .specialists .specialist-card .tight-spacing {
+.specialists .specialist-card .tight-spacing {
   margin-top: 12px;
   margin-bottom: -8px;
 }
-body .specialists .specialist-card .profile-img-container {
+.specialists .specialist-card .profile-img-container {
   position: relative;
   width: 120px;
   height: 120px;
-  margin: 0 auto 15px;
-  right: 0px;
+  margin: 0 auto 16px;
+  right: 0;
 }
-body .specialists .specialist-card img {
+.specialists .specialist-card img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
-body .specialists .specialist-card .flag-overlay {
+.specialists .specialist-card .flag-overlay {
   position: absolute;
   bottom: 50px;
-  right: -55px;
+  right: -56px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
   border: 1px solid #3464e2;
   background-color: white;
 }
-body .specialists .specialist-card .flag-overlay-second {
+.specialists .specialist-card .flag-overlay-second {
   position: absolute;
-  bottom: -5px;
-  right: -55px;
+  bottom: -4px;
+  right: -56px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
   border: 1px solid #3464e2;
   background-color: white;
 }
-body .specialists .specialist-card h4 {
+.specialists .specialist-card h4 {
   margin: 10px 0 5px 0;
   font-size: 20px;
   color: #111111;
 }
-body .specialists .specialist-card h4 p {
+.specialists .specialist-card h4 p {
   font-size: 18px;
   color: #333;
 }
-body .specialists .specialist-card h4 p .tight-spacing {
+.specialists .specialist-card h4 p .tight-spacing {
   margin-top: 1px;
   margin-bottom: 4px;
   line-height: 1.1;

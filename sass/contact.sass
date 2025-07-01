@@ -17,48 +17,48 @@ body
 .contact-container
   display: grid
   grid-template-columns: 1fr 1fr
-  gap: 150px
+  gap: $unit * 38       // 152px (originaal 150px)
   max-width: 1500px
   margin: 0 auto
-  padding: 30px
+  padding: $unit * 8    // 32px (originaal 30px)
 
   @include responsive(mobile)
-    gap: 20px
-    padding: 10px
+    gap: $unit * 5      // 20px
+    padding: $unit * 2  // 8px (originaal 10px)
 
   // Vahetamine arvuti ja telefoni (+tableti) vahel
   @include responsive(mobile)
-            grid-template-columns: 1fr
+    grid-template-columns: 1fr
             
   @include responsive(tablet)
-            gap: 20px
+    gap: $unit * 5      // 20px
 
   // Kontakti vormi asjad
 .contact-form
-  padding: 20px
+  padding: $unit * 5    // 20px
   background-color: $content
   border: 1px solid $border
   border-radius: 12px
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
 
   @include responsive(mobile)
-    padding: 10px
+    padding: $unit * 2  // 8px (originaal 10px)
 
   // Pealkiri
   h1
     font-size: 24px
-    margin-bottom: 20px
+    margin-bottom: $unit * 5 // 20px
 
   form
     display: flex
     flex-direction: column
-    gap: 15px
+    gap: $unit * 4       // 16px (originaal 15px)
 
     label
       font-weight: bold
 
     input
-      padding: 10px
+      padding: $unit * 2.5   // 10px
       border: 1px solid $border
       border-radius: 4px
       font-size: 16px
@@ -66,14 +66,14 @@ body
     textarea
       resize: vertical
       height: 230px
-      padding: 10px
+      padding: $unit * 2.5   // 10px
       border: 1px solid $border
       border-radius: 4px
       font-size: 16px
       font-family: Arial, sans-serif
 
     button
-      padding: 10px 20px
+      padding: $unit * 2.5 $unit * 5  // 10px 20px
       background-color: $button
       color: white
       border: none
@@ -81,7 +81,7 @@ body
       cursor: pointer
 
       @include responsive(mobile)
-        padding: 13px 20px
+        padding: $unit * 3.25 $unit * 5  // 13px 20px
 
       &:hover
         background-color: $button-hover
@@ -90,18 +90,18 @@ body
 .contact-info
   display: flex
   flex-direction: column
-  gap: 20px
+  gap: $unit * 5           // 20px
   background-color: $content
   border: 1px solid $border
   border-radius: 12px
-  padding-left: 20px
-  padding-right: 20px
+  padding-left: $unit * 5  // 20px
+  padding-right: $unit * 5 // 20px
 
   // Info ülemise osa asjad
   .upper-info
     h2
       font-size: 20px
-      margin-top: 20px
+      margin-top: $unit * 5 // 20px
 
     p
       font-size: 16px
@@ -111,14 +111,13 @@ body
       width: 18px
       height: 18px
       border-radius: 50%
-      margin-right: 8px // Lipu ja numbri vaheline kaugus
-      vertical-align: middle // Joondab lipud numbriga samale tasemele
+      margin-right: $unit * 2  // 8px
+      vertical-align: middle
       border: 2px solid $border
-
 
   // Info alumise osa asjad (kaart)
   .lower-info
-    padding-bottom: 15px
+    padding-bottom: $unit * 4  // 16px (originaal 15px)
 
     .map-embed
       width: 100%

@@ -34,12 +34,15 @@
       width: auto
 
   .hamburger
-    background: none
+    background: white
     border: none
-    font-size: 28px
+    font-size: 30px
+    padding-inline: $unit * 2.1
     cursor: pointer
     display: none
-    color: $button
+    color: #000000
+    border: 3px solid rgba(30, 82, 255, 0.502)
+    border-radius: 12px
 
   .nav-links
     display: flex
@@ -58,10 +61,11 @@
       width: 115px
       height: 25px
       padding: $unit * 1 + $unit / 2  ($unit * 3) // ~6px 12px -> ligilähedane
-      border-radius: $unit * 1.5  // 6px
+      padding-top: $unit * 3
+      border-radius: $unit * 2  // 12px
       transition: all 0.3s ease
-      background-color: lighten($button, 60%)
-      border-bottom: 1px solid rgba(30, 82, 255, 0.502)
+      background-color: white
+      border: 1px solid rgba(30, 82, 255, 0.502)
 
       &:hover
         background-color: $button-hover
@@ -81,11 +85,12 @@
 
   .social
     padding-left: $unit * 5
+    padding-right: $unit * 5
 
     .fa
-      padding: $unit * 3  // 12px
-      font-size: 24px
-      width: 24px
+      padding: $unit * 2  // 12px
+      font-size: 28px
+      width: 28px
       text-align: center
       text-decoration: none
       border-radius: 12px
@@ -123,16 +128,17 @@
   .mobile-menu
     display: none
     position: absolute
-    top: 70px
+    top: 80px
     right: $unit * 5  // 20px
-    background: white
+    background-color: $header
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
     padding: $unit * 5  // 20px
-    border-radius: $unit * 2  // 8px
+    border-radius: $unit * 3  // 8px
     flex-direction: column
     gap: $unit * 4  // 16px
     z-index: 100
     width: 80%
+    border: 2px solid rgba(30, 82, 255, 0.502)
 
     .mobile-nav-item
       color: $button
@@ -142,7 +148,8 @@
       padding: $unit * 2 + $unit / 2  // 10px (same as lang above)
       border-radius: $unit * 1.5  // 6px
       transition: background-color 0.3s
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+      border: 1px solid rgba(30, 82, 255, 0.502)
+      background-color: white
 
       &:hover
         background-color: $button-hover
@@ -165,8 +172,9 @@
         font-size: 16px
         padding: $unit * 2 + $unit / 2  // 10px
         border-radius: $unit * 1.5  // 6px
+        background-color: lighten($button, 65%)
         transition: background-color 0.3s
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+        border: 1px solid rgba(30, 82, 255, 0.502)
 
         &:hover
           background-color: $button-hover
@@ -192,8 +200,14 @@
         width: auto
 
   @include responsive(mobile)
+    padding: $unit * 3 ($unit * 0)
+    padding-right: $unit * 3
+    
     .social
       order: 1
+
+      .fa
+        border: 2px solid rgba(30, 82, 255, 0.502)
 
     .hamburger
       order: 2
@@ -201,6 +215,15 @@
 
     .nav-links, .lang-switch
       display: none
+    
+    .logo-container
+      display: flex
+      align-items: baseline
+      gap: $unit * 2  // 8px
+
+      .logo
+        height: 60px
+        width: auto
 
     #mobile-menu.show
       display: grid

@@ -33,12 +33,15 @@
   width: auto;
 }
 #site-header .hamburger {
-  background: none;
+  background: white;
   border: none;
-  font-size: 28px;
+  font-size: 30px;
+  padding-inline: 8.4px;
   cursor: pointer;
   display: none;
-  color: #2c3b64;
+  color: #000000;
+  border: 3px solid rgba(30, 82, 255, 0.502);
+  border-radius: 12px;
 }
 #site-header .nav-links {
   display: flex;
@@ -55,10 +58,11 @@
   width: 115px;
   height: 25px;
   padding: 6px 12px;
-  border-radius: 6px;
+  padding-top: 12px;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  background-color: #d5dced;
-  border-bottom: 1px solid rgba(30, 82, 255, 0.502);
+  background-color: white;
+  border: 1px solid rgba(30, 82, 255, 0.502);
 }
 #site-header .nav-links .nav-item:hover {
   background-color: #e7ecfb;
@@ -78,11 +82,12 @@
 }
 #site-header .social {
   padding-left: 20px;
+  padding-right: 20px;
 }
 #site-header .social .fa {
-  padding: 12px;
-  font-size: 24px;
-  width: 24px;
+  padding: 8px;
+  font-size: 28px;
+  width: 28px;
   text-align: center;
   text-decoration: none;
   border-radius: 12px;
@@ -121,16 +126,17 @@
 #site-header .mobile-menu {
   display: none;
   position: absolute;
-  top: 70px;
+  top: 80px;
   right: 20px;
-  background: white;
+  background-color: #f0f0f0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
   flex-direction: column;
   gap: 16px;
   z-index: 100;
   width: 80%;
+  border: 2px solid rgba(30, 82, 255, 0.502);
 }
 #site-header .mobile-menu .mobile-nav-item {
   color: #2c3b64;
@@ -140,7 +146,8 @@
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(30, 82, 255, 0.502);
+  background-color: white;
 }
 #site-header .mobile-menu .mobile-nav-item:hover {
   background-color: #e7ecfb;
@@ -163,8 +170,9 @@
   font-size: 16px;
   padding: 10px;
   border-radius: 6px;
+  background-color: #e7ebf4;
   transition: background-color 0.3s;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(30, 82, 255, 0.502);
 }
 #site-header .mobile-menu .mobile-lang-switch .mobile-lang:hover {
   background-color: #e7ecfb;
@@ -192,8 +200,15 @@
   }
 }
 @media (max-width: 720px) {
+  #site-header {
+    padding: 12px 0px;
+    padding-right: 12px;
+  }
   #site-header .social {
     order: 1;
+  }
+  #site-header .social .fa {
+    border: 2px solid rgba(30, 82, 255, 0.502);
   }
   #site-header .hamburger {
     order: 2;
@@ -201,6 +216,15 @@
   }
   #site-header .nav-links, #site-header .lang-switch {
     display: none;
+  }
+  #site-header .logo-container {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  #site-header .logo-container .logo {
+    height: 60px;
+    width: auto;
   }
   #site-header #mobile-menu.show {
     display: grid;
